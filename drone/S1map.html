@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_bba43945d32a48f5abf9a4f1315e71d5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_bba43945d32a48f5abf9a4f1315e71d5" ></div>
+        
+</body>
+<script>    
+    
+            var map_bba43945d32a48f5abf9a4f1315e71d5 = L.map(
+                "map_bba43945d32a48f5abf9a4f1315e71d5",
+                {
+                    center: [25.091185, 121.492264],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a7306b6bedb444009bdb70c76a9e4d9b = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_bba43945d32a48f5abf9a4f1315e71d5);
+        
+    
+            var marker_433b0a0b877e419dbc0aace48716cc56 = L.marker(
+                [25.091185, 121.492264],
+                {}
+            ).addTo(map_bba43945d32a48f5abf9a4f1315e71d5);
+        
+    
+            var marker_443c4af5aa334d4dad75eae5a6de72f3 = L.marker(
+                [25.091185, 121.492264],
+                {}
+            ).addTo(map_bba43945d32a48f5abf9a4f1315e71d5);
+        
+    
+            var div_icon_ae26946564ae42f8a4d7598e3c076c5d = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background-color: white;margin: 20px;padding: 20px; border-radius: 10px;\"\u003e\u003cdiv\u003e\u003cimg src=https://static.newmobilelife.com/wp-content/uploads/2019/06/bunny1.jpg width=80%\u003e\u003c/img\u003e\u003c/div\u003e\u003cbr\u003e\u003cdiv\u003e\u003cb\u003e\u670d\u52d9\u540d\u7a31\uff1atri_test\u003c/b\u003e\u003cbr\u003e\u003cb\u003e\u7121\u4eba\u6a5f\u578b\u865f\uff1a\u7121\u4eba\u6a5f\u578b\u865f\u003c/b\u003e\u003cbr\u003e\u003cb\u003e\u4f7f\u7528\u8005\uff1aweikai860624@gmail.com\u003c/b\u003e\u003cbr\u003e\u003cb\u003eSSID\uff1a84f273a0\u003c/b\u003e\u003cbr\u003e\u003cb\u003e\u5730\u9ede\uff1aTaipei,Taiwan\u003c/b\u003e\u003cbr\u003e\u003cb\u003e\u65e5\u671f\uff1a2020-9-24\u003c/b\u003e\u003cbr\u003e\u003cb\u003e\u6642\u9593\uff1a11:49:6\u003c/b\u003e\u003cbr\u003e\u003cb\u003e\u72c0\u614b\uff1a\u6b63\u5e38\u5b8c\u6210", "iconAnchor": [300, 250], "iconSize": [250, 100]});
+            marker_443c4af5aa334d4dad75eae5a6de72f3.setIcon(div_icon_ae26946564ae42f8a4d7598e3c076c5d);
+        
+</script>

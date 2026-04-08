@@ -1,0 +1,1602 @@
+[
+    {
+        "nameTRA": "Phenomenal Evil",
+        "description": "",
+        "id": 65,
+        "augmentSmallIconPath": "./icons/phenomenalevil_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Magic Missile",
+        "description": "",
+        "id": 133,
+        "augmentSmallIconPath": "./icons/magicmissile_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Vampirism",
+        "description": "",
+        "id": 1346,
+        "augmentSmallIconPath": "./icons/vampired_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Transmute: Prismatic",
+        "description": "",
+        "id": 238,
+        "augmentSmallIconPath": "./icons/transmuteprismatic_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Grandma's Chili Oil",
+        "description": "",
+        "id": 1406,
+        "augmentSmallIconPath": "./icons/grandmaschilioil_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Executioner",
+        "description": "",
+        "id": 32,
+        "augmentSmallIconPath": "./icons/executioner_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Jeweled Gauntlet",
+        "description": "",
+        "id": 48,
+        "augmentSmallIconPath": "./icons/jeweledgauntlet_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Scopier Weapons",
+        "description": "",
+        "id": 71,
+        "augmentSmallIconPath": "./icons/scopierweapons_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Slap Around",
+        "description": "",
+        "id": 136,
+        "augmentSmallIconPath": "./icons/slaparound_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Giant Slayer",
+        "description": "",
+        "id": 195,
+        "augmentSmallIconPath": "./icons/giantslayer_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Shrink Engine",
+        "description": "",
+        "id": 1373,
+        "augmentSmallIconPath": "./icons/shrinkengine_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Critical Missile",
+        "description": "",
+        "id": 1356,
+        "augmentSmallIconPath": "./icons/criticalmissile_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Tank Engine",
+        "description": "",
+        "id": 313,
+        "augmentSmallIconPath": "./icons/tank_engine_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Thread the Needle",
+        "description": "",
+        "id": 84,
+        "augmentSmallIconPath": "./icons/threadtheneedle_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Goredrink",
+        "description": "",
+        "id": 138,
+        "augmentSmallIconPath": "./icons/goredrink_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Witchful Thinking",
+        "description": "",
+        "id": 97,
+        "augmentSmallIconPath": "./icons/witchfulthinking_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Eureka",
+        "description": "",
+        "id": 30,
+        "augmentSmallIconPath": "./icons/eureka_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Soul Eater",
+        "description": "",
+        "id": 1375,
+        "augmentSmallIconPath": "./icons/souleater_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Weighted Popoffs",
+        "description": "",
+        "id": 2008,
+        "augmentSmallIconPath": "./icons/weightedpopoffs_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Quest: Steel Your Heart",
+        "description": "",
+        "id": 1152,
+        "augmentSmallIconPath": "./icons/quest_steelyourheart_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "From Beginning to End",
+        "description": "",
+        "id": 38,
+        "augmentSmallIconPath": "./icons/frombeginningtoend_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "It's Killing Time",
+        "description": "",
+        "id": 211,
+        "augmentSmallIconPath": "./icons/itskillingtime_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Deft",
+        "description": "",
+        "id": 22,
+        "augmentSmallIconPath": "./icons/deft_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Lightning Strikes",
+        "description": "",
+        "id": 52,
+        "augmentSmallIconPath": "./icons/lightningstrikes_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Infinite Recursion",
+        "description": "",
+        "id": 1388,
+        "augmentSmallIconPath": "./icons/infiniterecursion_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Upgrade Hubris",
+        "description": "",
+        "id": 1338,
+        "augmentSmallIconPath": "./icons/upgradehubris_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Transmute: Gold",
+        "description": "",
+        "id": 237,
+        "augmentSmallIconPath": "./icons/transmutegold_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Upgrade Collector",
+        "description": "",
+        "id": 1320,
+        "augmentSmallIconPath": "./icons/upgradecollector_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Get Excited!",
+        "description": "",
+        "id": 1322,
+        "augmentSmallIconPath": "./icons/getexcited_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Infernal Conduit",
+        "description": "",
+        "id": 45,
+        "augmentSmallIconPath": "./icons/infernalconduit_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Typhoon",
+        "description": "",
+        "id": 87,
+        "augmentSmallIconPath": "./icons/typhoon_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Stats on Stats!",
+        "description": "",
+        "id": 227,
+        "augmentSmallIconPath": "./icons/statsonstats_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Celestial Body",
+        "description": "",
+        "id": 13,
+        "augmentSmallIconPath": "./icons/celestialbody_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Overflow",
+        "description": "",
+        "id": 311,
+        "augmentSmallIconPath": "./icons/overflow_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Critical Healing",
+        "description": "",
+        "id": 118,
+        "augmentSmallIconPath": "./icons/criticalhealing_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Poro Blaster",
+        "description": "",
+        "id": 1409,
+        "augmentSmallIconPath": "./icons/poroblast_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Rabble Rousing",
+        "description": "",
+        "id": 67,
+        "augmentSmallIconPath": "./icons/rabblerousing_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Void Rift",
+        "description": "",
+        "id": 2002,
+        "augmentSmallIconPath": "./icons/voidrift_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Dual Wield",
+        "description": "",
+        "id": 225,
+        "augmentSmallIconPath": "./icons/dualwield_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Speed Demon",
+        "description": "",
+        "id": 1405,
+        "augmentSmallIconPath": "./icons/speeddemon_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Tap Dancer",
+        "description": "",
+        "id": 81,
+        "augmentSmallIconPath": "./icons/tapdancer_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "ADAPt",
+        "description": "",
+        "id": 205,
+        "augmentSmallIconPath": "./icons/adapt_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Scopiest Weapons",
+        "description": "",
+        "id": 115,
+        "augmentSmallIconPath": "./icons/scopiestweapons_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Scoped Weapons",
+        "description": "",
+        "id": 1170,
+        "augmentSmallIconPath": "./icons/scopedweapons_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Perseverance",
+        "description": "",
+        "id": 64,
+        "augmentSmallIconPath": "./icons/perseverance_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Red Envelopes",
+        "description": "",
+        "id": 1391,
+        "augmentSmallIconPath": "./icons/redenvelopes_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Marksmage",
+        "description": "",
+        "id": 129,
+        "augmentSmallIconPath": "./icons/marksmage_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Critical Rhythm",
+        "description": "",
+        "id": 1328,
+        "augmentSmallIconPath": "./icons/criticalrhythm_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Goliath",
+        "description": "",
+        "id": 41,
+        "augmentSmallIconPath": "./icons/goliath_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Recursion",
+        "description": "",
+        "id": 68,
+        "augmentSmallIconPath": "./icons/recursion_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Twice Thrice",
+        "description": "",
+        "id": 107,
+        "augmentSmallIconPath": "./icons/twicethrice_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Donation",
+        "description": "",
+        "id": 1384,
+        "augmentSmallIconPath": "./icons/donation_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Twin Fire",
+        "description": "",
+        "id": 1415,
+        "augmentSmallIconPath": "./icons/twinfire_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Upgrade Infinity Edge",
+        "description": "",
+        "id": 1336,
+        "augmentSmallIconPath": "./icons/upgradeie_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Firefox",
+        "description": "",
+        "id": 308,
+        "augmentSmallIconPath": "./icons/firfox_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Light 'Em Up!",
+        "description": "",
+        "id": 1051,
+        "augmentSmallIconPath": "./icons/lightemup_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Transmute: Chaos",
+        "description": "",
+        "id": 243,
+        "augmentSmallIconPath": "./icons/transmutechaos_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "OwO Blaster",
+        "description": "",
+        "id": -1,
+        "augmentSmallIconPath": "./icons/heavy_hitter_large.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Ice Cold",
+        "description": "",
+        "id": 44,
+        "augmentSmallIconPath": "./icons/icecold_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Mind to Matter",
+        "description": "",
+        "id": 56,
+        "augmentSmallIconPath": "./icons/mindtomatter_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Hat on a Hat",
+        "description": "",
+        "id": 1341,
+        "augmentSmallIconPath": "./icons/hatonahat_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Dropkick",
+        "description": "",
+        "id": 2006,
+        "augmentSmallIconPath": "./icons/dropkick_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Clown College",
+        "description": "",
+        "id": 310,
+        "augmentSmallIconPath": "./icons/clowncollege_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Shadow Runner",
+        "description": "",
+        "id": 73,
+        "augmentSmallIconPath": "./icons/shadowrunner_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Keystone Conjurer",
+        "description": "",
+        "id": 50,
+        "augmentSmallIconPath": "./icons/keystoneconjurer_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "First-Aid Kit",
+        "description": "",
+        "id": 37,
+        "augmentSmallIconPath": "./icons/firstaidkit_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Stats!",
+        "description": "",
+        "id": 226,
+        "augmentSmallIconPath": "./icons/stats_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Soul Siphon",
+        "description": "",
+        "id": 77,
+        "augmentSmallIconPath": "./icons/soulsiphon_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Final Form",
+        "description": "",
+        "id": 1344,
+        "augmentSmallIconPath": "./icons/finalform_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Quest: Wooglet's Witchcap",
+        "description": "",
+        "id": 156,
+        "augmentSmallIconPath": "./icons/quest_woogletswitchcap_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Slow Cooker",
+        "description": "",
+        "id": 75,
+        "augmentSmallIconPath": "./icons/slowcooker_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Final City Transit",
+        "description": "",
+        "id": 33228,
+        "augmentSmallIconPath": "./icons/9189_train.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Stats on Stats on Stats!",
+        "description": "",
+        "id": 228,
+        "augmentSmallIconPath": "./icons/statsonstatsonstats_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Swift and Safe",
+        "description": "",
+        "id": 1315,
+        "augmentSmallIconPath": "./icons/swiftandsafe_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Double Tap",
+        "description": "",
+        "id": 2010,
+        "augmentSmallIconPath": "./icons/doubletap_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Escape Plan",
+        "description": "",
+        "id": 1333,
+        "augmentSmallIconPath": "./icons/escapeplan_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Outlaw's Grit",
+        "description": "",
+        "id": 63,
+        "augmentSmallIconPath": "./icons/outlawsgrit_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Dive Bomber",
+        "description": "",
+        "id": 25,
+        "augmentSmallIconPath": "./icons/divebomber_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Homeguard",
+        "description": "",
+        "id": 1105,
+        "augmentSmallIconPath": "./icons/homeguard_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Sonata",
+        "description": "",
+        "id": 1420,
+        "augmentSmallIconPath": "./icons/sonata_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Buff Buddies",
+        "description": "",
+        "id": 9,
+        "augmentSmallIconPath": "./icons/buffbuddies_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "OK Boomerang",
+        "description": "",
+        "id": 61,
+        "augmentSmallIconPath": "./icons/okboomerang_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Quest: Icathia's Fall",
+        "description": "",
+        "id": 1361,
+        "augmentSmallIconPath": "./icons/quest_voidimmolation_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Ocean Soul",
+        "description": "",
+        "id": 60,
+        "augmentSmallIconPath": "./icons/oceansoul_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Spiritual Purification",
+        "description": "",
+        "id": 1345,
+        "augmentSmallIconPath": "./icons/spiritualpurification_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Skilled Sniper",
+        "description": "",
+        "id": 113,
+        "augmentSmallIconPath": "./icons/skilledsniper_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Fan the Hammer",
+        "description": "",
+        "id": 220,
+        "augmentSmallIconPath": "./icons/fanthehammer_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Bread And Butter",
+        "description": "",
+        "id": 103,
+        "augmentSmallIconPath": "./icons/breadandbutter_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Mystic Punch",
+        "description": "",
+        "id": 58,
+        "augmentSmallIconPath": "./icons/mysticpunch_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "The Brutalizer",
+        "description": "",
+        "id": 82,
+        "augmentSmallIconPath": "./icons/thebrutalizer_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Firebrand",
+        "description": "",
+        "id": 36,
+        "augmentSmallIconPath": "./icons/firebrand_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Snowball Upgrade",
+        "description": "",
+        "id": 1334,
+        "augmentSmallIconPath": "./icons/snowballupgrade_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Infernal Soul",
+        "description": "",
+        "id": 46,
+        "augmentSmallIconPath": "./icons/infernalsoul_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Nightstalking",
+        "description": "",
+        "id": 1326,
+        "augmentSmallIconPath": "./icons/nightstalking_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Self Destruct",
+        "description": "",
+        "id": 108,
+        "augmentSmallIconPath": "./icons/selfdestruct_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Zealot",
+        "description": "",
+        "id": 2009,
+        "augmentSmallIconPath": "./icons/zealot_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Upgrade Zhonya's",
+        "description": "",
+        "id": 1318,
+        "augmentSmallIconPath": "./icons/upgradezh_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Cheating",
+        "description": "",
+        "id": 1313,
+        "augmentSmallIconPath": "./icons/cheating_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Slow and Steady",
+        "description": "",
+        "id": 250,
+        "augmentSmallIconPath": "./icons/slowandsteady_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Vulnerability",
+        "description": "",
+        "id": 92,
+        "augmentSmallIconPath": "./icons/vulnerability_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Symphony of War",
+        "description": "",
+        "id": 79,
+        "augmentSmallIconPath": "./icons/symphonyofwar_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Snowball Roulette",
+        "description": "",
+        "id": 1342,
+        "augmentSmallIconPath": "./icons/snowballupgrade_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Bread And Cheese",
+        "description": "",
+        "id": 151,
+        "augmentSmallIconPath": "./icons/breadandcheese_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Divine Intervention",
+        "description": "",
+        "id": 1301,
+        "augmentSmallIconPath": "./icons/slowactingpainkillers_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "escAPADe",
+        "description": "",
+        "id": 206,
+        "augmentSmallIconPath": "./icons/escapade_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "It's Critical",
+        "description": "",
+        "id": 47,
+        "augmentSmallIconPath": "./icons/itscritical_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Apex Inventor",
+        "description": "",
+        "id": 2,
+        "augmentSmallIconPath": "./icons/apexinventor_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Pinball",
+        "description": "",
+        "id": 1358,
+        "augmentSmallIconPath": "./icons/pinballsnowball_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Cruelty",
+        "description": "",
+        "id": 1323,
+        "augmentSmallIconPath": "./icons/cruelty_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Frost Wraith",
+        "description": "",
+        "id": 39,
+        "augmentSmallIconPath": "./icons/frostwraith_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Ethereal Weapon",
+        "description": "",
+        "id": 29,
+        "augmentSmallIconPath": "./icons/etherealweapon_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Impassable",
+        "description": "",
+        "id": 149,
+        "augmentSmallIconPath": "./icons/impassable_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Big Brain",
+        "description": "",
+        "id": 180,
+        "augmentSmallIconPath": "./icons/bigbrain_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Bread And Jam",
+        "description": "",
+        "id": 150,
+        "augmentSmallIconPath": "./icons/breadandjam_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Biggest Snowball Ever",
+        "description": "",
+        "id": 1329,
+        "augmentSmallIconPath": "./icons/biggestsnowballever_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Shrink Ray",
+        "description": "",
+        "id": 74,
+        "augmentSmallIconPath": "./icons/shrinkray_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Upgrade Sheen",
+        "description": "",
+        "id": 1996,
+        "augmentSmallIconPath": "./icons/upgradesheen_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Guilty Pleasure",
+        "description": "",
+        "id": 42,
+        "augmentSmallIconPath": "./icons/guiltypleasure_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Dashing",
+        "description": "",
+        "id": 19,
+        "augmentSmallIconPath": "./icons/dashing_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Leg Day",
+        "description": "",
+        "id": 305,
+        "augmentSmallIconPath": "./icons/legday_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Master of Duality",
+        "description": "",
+        "id": 54,
+        "augmentSmallIconPath": "./icons/masterofduality_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Adamant",
+        "description": "",
+        "id": 1327,
+        "augmentSmallIconPath": "./icons/adamant_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Growth Spurt",
+        "description": "",
+        "id": 1401,
+        "augmentSmallIconPath": "./icons/growthspurt_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "All For You",
+        "description": "",
+        "id": 141,
+        "augmentSmallIconPath": "./icons/allforyou_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Blunt Force",
+        "description": "",
+        "id": 7,
+        "augmentSmallIconPath": "./icons/bluntforce_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Courage of the Colossus",
+        "description": "",
+        "id": 1018,
+        "augmentSmallIconPath": "./icons/courageofthecolossus_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Upgrade Immolate",
+        "description": "",
+        "id": 1319,
+        "augmentSmallIconPath": "./icons/upgradeimmolate_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Erosion",
+        "description": "",
+        "id": 28,
+        "augmentSmallIconPath": "./icons/erosion_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Prom Queen",
+        "description": "",
+        "id": 1421,
+        "augmentSmallIconPath": "./icons/promqueen_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Ultimate Revolution",
+        "description": "",
+        "id": 88,
+        "augmentSmallIconPath": "./icons/ultimaterevolution_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Restless Restoration",
+        "description": "",
+        "id": 70,
+        "augmentSmallIconPath": "./icons/restlessrestoration_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Blade Waltz",
+        "description": "",
+        "id": 6,
+        "augmentSmallIconPath": "./icons/bladewaltz_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Ultimate Awakening",
+        "description": "",
+        "id": 1349,
+        "augmentSmallIconPath": "./icons/zerohour_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Demon's Dance",
+        "description": "",
+        "id": 23,
+        "augmentSmallIconPath": "./icons/demonsdance_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Holy Fire",
+        "description": "",
+        "id": 198,
+        "augmentSmallIconPath": "./icons/holyfire_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Heads Up Cupcake!",
+        "description": "",
+        "id": 2001,
+        "augmentSmallIconPath": "./icons/watchoutgrapefruit_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Hextech Soul",
+        "description": "",
+        "id": 1416,
+        "augmentSmallIconPath": "./icons/infernalsoul_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Glass Cannon",
+        "description": "",
+        "id": 33307,
+        "augmentSmallIconPath": "./icons/glasscannon_large.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Quantum Computing",
+        "description": "",
+        "id": 66,
+        "augmentSmallIconPath": "./icons/quantumcomputing_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Ultimate Unstoppable",
+        "description": "",
+        "id": 112,
+        "augmentSmallIconPath": "./icons/ultimateunstoppable_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "OwO Blaster",
+        "description": "",
+        "id": -1,
+        "augmentSmallIconPath": "./icons/withhaste_large.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Dawnbringer's Resolve",
+        "description": "",
+        "id": 20,
+        "augmentSmallIconPath": "./icons/dawnbringersresolve_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Tormentor",
+        "description": "",
+        "id": 85,
+        "augmentSmallIconPath": "./icons/tormentor_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Kill Secured",
+        "description": "",
+        "id": 2026,
+        "augmentSmallIconPath": "./icons/killsecure_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Upgrade Thornmail",
+        "description": "",
+        "id": 1411,
+        "augmentSmallIconPath": "./icons/upgradecollector_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Cerberus",
+        "description": "",
+        "id": 323,
+        "augmentSmallIconPath": "./icons/cerberus_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Draw Your Sword",
+        "description": "",
+        "id": 134,
+        "augmentSmallIconPath": "./icons/drawyoursword_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Goldrend",
+        "description": "",
+        "id": 1335,
+        "augmentSmallIconPath": "./icons/goldrend_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Sonic Boom",
+        "description": "",
+        "id": 76,
+        "augmentSmallIconPath": "./icons/sonicboom_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Holy Snowball",
+        "description": "",
+        "id": 1392,
+        "augmentSmallIconPath": "./icons/goldensnowball_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Trueshot Prodigy",
+        "description": "",
+        "id": 86,
+        "augmentSmallIconPath": "./icons/trueshotprodigy_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Flashy",
+        "description": "",
+        "id": 116,
+        "augmentSmallIconPath": "./icons/flashy_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Protein Shake",
+        "description": "",
+        "id": 1324,
+        "augmentSmallIconPath": "./icons/proteinshake_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Gash",
+        "description": "",
+        "id": 1321,
+        "augmentSmallIconPath": "./icons/darksteeltalons_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Tank It Or Leave It",
+        "description": "",
+        "id": 80,
+        "augmentSmallIconPath": "./icons/tankitorleaveit_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Circle of Death",
+        "description": "",
+        "id": 15,
+        "augmentSmallIconPath": "./icons/circleofdeath_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Fey Magic",
+        "description": "",
+        "id": 194,
+        "augmentSmallIconPath": "./icons/feymagic_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Wind Beneath Blade",
+        "description": "",
+        "id": 1316,
+        "augmentSmallIconPath": "./icons/windbeneathblade_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Juiced",
+        "description": "",
+        "id": 2016,
+        "augmentSmallIconPath": "./icons/juiced_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Triggered Inferno",
+        "description": "",
+        "id": 2005,
+        "augmentSmallIconPath": "./icons/madscientist_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Ominous Pact",
+        "description": "",
+        "id": 1332,
+        "augmentSmallIconPath": "./icons/wisdomofages_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Windspeaker's Blessing",
+        "description": "",
+        "id": 95,
+        "augmentSmallIconPath": "./icons/windspeakersblessing_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Can't Touch This",
+        "description": "",
+        "id": 1011,
+        "augmentSmallIconPath": "./icons/canttouchthis_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Mountain Soul",
+        "description": "",
+        "id": 1057,
+        "augmentSmallIconPath": "./icons/mountainsoul_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Crit 'n Cast",
+        "description": "",
+        "id": 2024,
+        "augmentSmallIconPath": "./icons/critncast_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Searing Dawn",
+        "description": "",
+        "id": 72,
+        "augmentSmallIconPath": "./icons/searingdawn_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Veil of Warding",
+        "description": "",
+        "id": 1034,
+        "augmentSmallIconPath": "./icons/poltergeist_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Omni Soul",
+        "description": "",
+        "id": 62,
+        "augmentSmallIconPath": "./icons/omnisoul_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Feel the Burn",
+        "description": "",
+        "id": 1035,
+        "augmentSmallIconPath": "./icons/feeltheburn_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Mad Scientist",
+        "description": "",
+        "id": 53,
+        "augmentSmallIconPath": "./icons/madscientist_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Bounce of the Poro King",
+        "description": "",
+        "id": 2003,
+        "augmentSmallIconPath": "./icons/poroking_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Quest: Urf's Champion",
+        "description": "",
+        "id": 154,
+        "augmentSmallIconPath": "./icons/quest_urfschampion_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Mighty Shield",
+        "description": "",
+        "id": 1314,
+        "augmentSmallIconPath": "./icons/mightyshield_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Back To Basics",
+        "description": "",
+        "id": 4,
+        "augmentSmallIconPath": "./icons/backtobasics_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Earthwake",
+        "description": "",
+        "id": 27,
+        "augmentSmallIconPath": "./icons/earthwake_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Empowered By The Faithful",
+        "description": "",
+        "id": 2004,
+        "augmentSmallIconPath": "./icons/empoweredbythefaithful_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Purist - Caster",
+        "description": "",
+        "id": 2018,
+        "augmentSmallIconPath": "./icons/puristcaster_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "King Me",
+        "description": "",
+        "id": 1337,
+        "augmentSmallIconPath": "./icons/kingme_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Upgrade Mikael's Blessing",
+        "description": "",
+        "id": 1340,
+        "augmentSmallIconPath": "./icons/upgrademikaelsblessing_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Don't Blink",
+        "description": "",
+        "id": 26,
+        "augmentSmallIconPath": "./icons/dontblink_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "I'm a Baby Kitty Where is Mama",
+        "description": "",
+        "id": 1372,
+        "augmentSmallIconPath": "./icons/babykitty_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "ReEnergize",
+        "description": "",
+        "id": 1330,
+        "augmentSmallIconPath": "./icons/mobiuscoil_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Repulsor",
+        "description": "",
+        "id": 69,
+        "augmentSmallIconPath": "./icons/repulsor_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Laser Heal",
+        "description": "",
+        "id": 1339,
+        "augmentSmallIconPath": "./icons/laseheal_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Droppybara",
+        "description": "",
+        "id": 1414,
+        "augmentSmallIconPath": "./icons/orbitallaser_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Spin To Win",
+        "description": "",
+        "id": 214,
+        "augmentSmallIconPath": "./icons/spintowin_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "???",
+        "description": "",
+        "id": 1424,
+        "augmentSmallIconPath": "./icons/missingping_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Empyrean Promise",
+        "description": "",
+        "id": 1331,
+        "augmentSmallIconPath": "./icons/empyreampromise_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Minionmancer",
+        "description": "",
+        "id": 104,
+        "augmentSmallIconPath": "./icons/minionmancer_small.png",
+        "rarity": "kGold",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Poltergeist",
+        "description": "",
+        "id": 1347,
+        "augmentSmallIconPath": "./icons/poltergeist_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Stuck In Here With Me",
+        "description": "",
+        "id": 1413,
+        "augmentSmallIconPath": "./icons/stuckinherewithme_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Devil on Your Shoulder",
+        "description": "",
+        "id": 2007,
+        "augmentSmallIconPath": "./icons/littledevil_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Hand of Baron",
+        "description": "",
+        "id": 1389,
+        "augmentSmallIconPath": "./icons/handofbaron_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Crack Open That Egg",
+        "description": "",
+        "id": 1418,
+        "augmentSmallIconPath": "./icons/crackopenthategg_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Flashbang",
+        "description": "",
+        "id": 187,
+        "augmentSmallIconPath": "./icons/flashbang_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Pandora's Box",
+        "description": "",
+        "id": 317,
+        "augmentSmallIconPath": "./icons/pandoras_box_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Flash 2",
+        "description": "",
+        "id": 1348,
+        "augmentSmallIconPath": "./icons/flash2_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Sneakerhead",
+        "description": "",
+        "id": 1343,
+        "augmentSmallIconPath": "./icons/sneakerhead_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Fetch",
+        "description": "",
+        "id": 1374,
+        "augmentSmallIconPath": "./icons/fetch_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    },
+    {
+        "nameTRA": "Spin Me Right Round",
+        "description": "",
+        "id": 1386,
+        "augmentSmallIconPath": "./icons/youspinmerightround_small.png",
+        "rarity": "kSilver",
+        "weight": 10
+    }
+]

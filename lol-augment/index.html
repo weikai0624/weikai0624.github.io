@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 基本樣式與 LOL 風格配色 */
+        body { background: #0a0a0c; color: #f0e6d2; font-family: "Microsoft JhengHei", sans-serif; text-align: center; margin: 0; }
+        .container { max-width: 1000px; margin: 40px auto; padding: 20px; }
+
+        /* 導覽列樣式 */
+        nav { margin-bottom: 30px; border-bottom: 1px solid #3c3c41; padding-bottom: 10px; }
+        nav a { color: #c89b3c; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        nav a:hover { color: #ffffff; }
+
+        /* 卡片容器 */
+        .card-container { display: flex; gap: 20px; justify-content: center; min-height: 300px; margin-top: 30px; }
+        
+        /* 卡片樣式 */
+        .card { 
+            background: #1c1c1f; border: 2px solid #3c3c41; padding: 20px;
+            width: 240px; border-radius: 8px; transition: 0.3s;
+            display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+        }
+        .card h3 { margin: 15px 0 10px; font-size: 1.1rem; color: #ffffff; }
+        .card p { font-size: 13px; color: #a0a0a0; line-height: 1.5; text-align: center; margin-bottom: 15px; }
+        
+        /* 等級邊框顏色 */
+        .kSilver { border-color: #a0a0a0; }
+        .kGold { border-color: #d4af37; box-shadow: 0 0 5px rgba(212, 175, 55, 0.3); }
+        .kPrismatic { border-color: #b848ff; box-shadow: 0 0 15px rgba(184, 72, 255, 0.4); }
+
+        /* 按鈕樣式 */
+        button { 
+            background: #1e2328; color: #cdbe91; border: 1px solid #c89b3c;
+            padding: 10px 25px; font-weight: bold; cursor: pointer; transition: 0.2s;
+        }
+        button:hover { background: #c89b3c; color: #1e2328; }
+        button:disabled { border-color: #5b5a56; color: #5b5a56; cursor: not-allowed; background: #1e2328; }
+        
+        .reroll-btn { padding: 5px 15px; font-size: 12px; margin-top: auto; }
+        #main-draw-btn { font-size: 18px; padding: 12px 40px; margin-top: 40px; }
+
+        .tooltip-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* 建立提示框 */
+        .tooltip-wrapper::after {
+            content: attr(data-tip); /* 抓取 data-tip 的內容 */
+            position: absolute;
+            bottom: 110%; /* 顯示在圖片上方 */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.2s;
+            pointer-events: none; /* 防止滑鼠點到提示框 */
+            width: max-content;     /* 根據內容自動調整寬度 */
+            min-width: 180px;       /* 設定最小寬度，防止太瘦 */
+            max-width: 250px;       /* 設定最大寬度，超過會自動折行 */
+        }
+
+        /* 滑鼠移入時顯示 */
+        .tooltip-wrapper:hover::after {
+            white-space: pre-line;  /* <--- 就是這行讓 \n 生效 */
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <nav>
+            <a href="?lang=zh_tw">繁體中文</a>
+            <a href="?lang=en_us">English</a>
+        </nav> -->
+
+        <h1 id="title">增幅裝置抽取模擬</h1>
+        <p id="info">剩餘抽取次數: 4</p>
+
+        <div id="status-bar" style="min-height: 80px; margin-bottom: 20px; padding: 10px; background: rgba(255,255,255,0.05); border-radius: 8px; display: none;">
+            <div id="selected-icons" style="display: flex; justify-content: center; gap: 10px; margin-bottom: 10px;"></div>
+            <div id="active-labels" style="display: flex; justify-content: center; gap: 5px; flex-wrap: wrap;"></div>
+        </div>
+        
+        <div class="card-container" id="display">
+            <p style="color: #555;">點擊下方按鈕開始第一輪抽取</p>
+        </div>
+
+        <button id="main-draw-btn" onclick="handleDraw()">開始抽取 (Roll)</button>
+
+        <button id="dont-play-reset-btn" onclick="resetGame()" style="display: none; background: #333; border-color: #888;">
+            都好爛 不抽了 8ff (WTF 8ff Quit)
+            </button>
+
+        <button id="reset-btn" onclick="resetGame()" style="display: none; background: #333; border-color: #888;">
+                重新開始 (New Game)
+            </button>
+
+    </div>
+    <script src="AugmentEngine.js"></script>
+    <script src="LanguageManager.js"></script>
+    <script>
+        let engine;
+        let globalData; // 用來暫存載入過的 JSON 資料，重製時就不用重新 fetch
+        let augmentSets;
+        const langManager = new LanguageManager();
+
+        // 1. 初始化：只負責拿資料
+        async function initApp() {
+            globalData = await langManager.getAugmentData();
+            augmentSets = await langManager.getAugmentSets();
+            if (globalData && globalData.length > 0) {
+                await createNewEngine(); // 第一次建立引擎
+            } else {
+                document.getElementById("display").innerHTML = "數據加載失敗。";
+                
+            }
+        }
+
+        // 2. 核心：建立一個全新的引擎實例
+        async function createNewEngine() {
+            engine = new AugmentEngine(globalData, augmentSets); // 直接 new 一個新的
+            // 重置 UI 狀態
+            document.getElementById("dont-play-reset-btn").style.display = "none";
+            document.getElementById("info").innerText = `剩餘抽取次數: 4`;
+            document.getElementById("main-draw-btn").style.display = "inline-block";
+            document.getElementById("main-draw-btn").disabled = false;
+            document.getElementById("reset-btn").style.display = "none";
+            document.getElementById("display").innerHTML = '<p id="status-text" style="color: #555;">點擊下方按鈕開始第一輪抽取</p>';
+            updateStatusBar();
+            console.log("新引擎已建立，所有紀錄已清空。");
+        }
+
+        // 3. 處理抽取
+        function handleDraw() {
+            document.getElementById("main-draw-btn").style.display = "none"; 
+            document.getElementById("dont-play-reset-btn").style.display = "inline-block";
+            if (!engine) return;
+
+            const res = engine.rollRound();
+            // if (!res) return;
+            console.log('res', res);
+            render(res);
+
+            // 監控次數：如果抽完了
+                if (res.roundsLeft === -1) {
+                    document.getElementById("info").innerText = "抽取結束！這是你的最終增幅裝置組合：";
+                    document.getElementById("main-draw-btn").style.display = "none"; 
+                    document.getElementById("reset-btn").style.display = "inline-block"; 
+                    document.getElementById("dont-play-reset-btn").style.display = "none";
+                    // 顯示最終所有選擇過的卡牌
+                    showFinalResults();
+                }
+        }
+
+        // 4. 重置遊戲：直接 call createNewEngine
+        async function resetGame() {
+            await createNewEngine();
+        }
+
+        // 渲染 UI (與之前相同)
+        function render(res) {
+            document.getElementById("info").innerText = `剩餘抽取次數: ${res.roundsLeft}`;
+            const display = document.getElementById("display");
+            display.innerHTML = "";
+
+            Object.entries(res.options).forEach(([key, value]) => {
+                console.log('console.log( key == "opt")');
+                console.log( key == "opt");
+                if (key == "opt"){
+                    value.forEach((opt, i) => {
+                        const cardDiv = document.createElement("div");
+                        cardDiv.className = `card ${res.tier}`;
+                        cardDiv.id = `card-slot-${i}`;
+                        
+                        // 1. 取得該組合的資料
+                        const optsetsInfo = res.options.optsets[i]; 
+
+                        // 2. 處理內層 loop: 將 SetNameTranslationArray 轉為漂亮的標籤字串
+                        // 這裡套用了你提供的 CSS 樣式
+                        const optsetsInfoHtml = optsetsInfo.SetNameTranslationArray.map(optset => {
+                        // 處理倍數顯示邏輯 (如果有 count 資料的話)
+                            const countText = optset.count > 1 ? ` <b style="color:#fff">x${optset.count}</b>` : "";
+                            // 返回帶有 inline style 的 span 字串
+
+                            return `
+                                <span class="tooltip-wrapper" 
+                                    data-tip="
+                                        ${optset.description}\n
+                                        --------------------\n
+                                        2個: ${optset["2"]}\n
+                                        3個: ${optset["3"]}\n
+                                        4個: ${optset["4"]}\n"
+                                    style="
+                                        background: #1e2328; border: 1px solid #c89b3c; color: #cdbe91;
+                                        padding: 3px 10px; border-radius: 12px; font-size: 11px;
+                                        display: inline-block; margin: 2px;
+                                        box-shadow: 0 0 5px rgba(200,155,60,0.2);
+                                        cursor: help; /* 建議加上這個，讓使用者知道滑鼠移上去有東西 */
+                                    ">
+                                    ${optset.SetNameTranslation}
+                                </span>`;
+                                }).join('');
+
+                        // 1. 設置內容 (按鈕移除 onclick，改由 JS 控制)
+                        cardDiv.innerHTML = `
+                            <img src="${opt.augmentSmallIconPath || ''}" width="60">
+                            <h3>${opt.nameTRA}</h3>
+                            <p>${opt.description}</p>
+                            <div class="labels-container" style="display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 10px;">
+                                ${optsetsInfoHtml} 
+                            </div>
+                            <button class="reroll-btn">重抽 (Reroll)</button>
+                        `;
+
+                        // 2. 綁定卡片整體的點擊事件 (選擇卡片)
+                        cardDiv.addEventListener('click', () => {
+                            handleCardSelect(i);
+                        });
+
+                        // 3. 綁定按鈕點擊事件 (重抽)
+                        const rerollBtn = cardDiv.querySelector('.reroll-btn');
+                        rerollBtn.addEventListener('click', (event) => {
+                            event.stopPropagation(); // *** 關鍵！阻止事件冒泡，點按鈕時不會觸發卡片的點擊 ***
+                            handleReroll(i);        // 執行重抽邏輯
+                        });
+
+                        display.appendChild(cardDiv);
+                });
+                }
+            });
+        }
+        
+        // 選擇卡片
+        function handleCardSelect(idx) {
+        // 1. 引擎處理選擇
+            const selected = engine.confirmSelection(idx);
+            // 2. 更新畫面上方的即時狀態 (Icons + Labels)
+            updateStatusBar();
+            handleDraw();
+        }
+        // 重抽邏輯
+        function handleReroll(idx) {
+            const newCard = engine.rerollCard(idx);
+            if (newCard) {
+                updateSingleCardUI(idx, newCard, engine.currentTier);
+            }
+        }
+
+    function updateStatusBar() {
+        const statusBar = document.getElementById("status-bar");
+        const iconsDiv = document.getElementById("selected-icons");
+        const labelsDiv = document.getElementById("active-labels");
+
+        // 取得目前已選的所有卡片物件 (你在 Engine.confirmSelection 裡 push 到 labels 了)
+        const selectedList = engine.labels;
+        console.log('selectedList');
+        console.log(selectedList);
+        if (selectedList.length > 0) {
+            statusBar.style.display = "block";
+        }
+
+        iconsDiv.innerHTML = "";
+        labelsDiv.innerHTML = "";
+
+        // A. 渲染圖示
+        selectedList.forEach(aug => {
+            // 1. 建立容器 (外殼)
+            const wrapper = document.createElement("div");
+            wrapper.className = "tooltip-wrapper"; // 對應你 CSS 寫的 class
+            
+            // 2. 將字樣內容放入 data-tip 屬性
+            // 使用 \n 在 CSS content 中換行需要額外處理，建議先放純文字
+            wrapper.setAttribute("data-tip", `${aug.nameTRA}: ${aug.description}`);
+
+            // 3. 建立圖片
+            const img = document.createElement("img");
+            img.src = aug.augmentSmallIconPath || '';
+            img.width = 40;
+            img.style.cssText = `
+                border: 2px solid ${getTierColor(aug.rarity)};
+                border-radius: 6px;
+                background: #1a1a1a;
+                display: block; /* 避免圖片下方有空隙 */
+            `;
+
+            // 4. 組裝：圖片放入容器，容器放入 iconsDiv
+            wrapper.appendChild(img);
+            iconsDiv.appendChild(wrapper);
+        });
+
+        // B. 渲染標籤
+        const labelCounts = engine.labelCounts;
+        Object.entries(labelCounts).forEach(([name, value]) => {
+            const span = document.createElement("span");
+            const countText = value.count > 1 ? ` <b style="color:#fff">x${value.count}</b>` : "";
+            span.innerHTML = `${value.SetNameTranslation}${countText}`;
+            // 1. 定義一個「星星」符號
+            const mark = (threshold) => (value.count >= threshold ? "✔" : "○");
+
+            // 2. 組合純文字內容 (用 \n 換行)
+            const tipContent = `${value.description}\n` +
+                        `--------------------\n` + // 分隔線增加美觀
+                        `${mark(2)} 2個: ${value["2"]}\n` +
+                        `${mark(3)} 3個: ${value["3"]}\n` +
+                        `${mark(4)} 4個: ${value["4"]}`;
+            span.className = "tooltip-wrapper"; // 加入你的 Class
+            span.setAttribute("data-tip", tipContent); // 加入提示文字內容
+
+            span.style.cssText = `
+                background: #1e2328; border: 1px solid #c89b3c; color: #cdbe91;
+                padding: 3px 10px; border-radius: 12px; font-size: 11px;
+                box-shadow: 0 0 5px rgba(200,155,60,0.2);
+            `;
+            labelsDiv.appendChild(span);
+        });
+    }
+
+    // 輔助顏色函式
+    function getTierColor(rarity) {
+        switch(rarity) {
+            case 'kPrismatic': return '#b848ff';
+            case 'kGold': return '#d4af37';
+            default: return '#a0a0a0';
+        }
+    }
+        function updateSingleCardUI(idx, opt, tier) {
+            const cardSlot = document.getElementById(`card-slot-${idx}`);
+            if (cardSlot) {
+                cardSlot.innerHTML = `
+                    <div class="card-content" onclick="handleCardSelect(${idx})">
+                        <img src="${opt.augmentSmallIconPath || ''}" width="60">
+                        <h3>${opt.nameTRA}</h3>
+                        <p>${opt.description}</p>
+                        <button class="reroll-btn" onclick="event.stopPropagation(); handleReroll(${idx})">
+                            重抽 (Reroll)
+                        </button>
+                    </div>
+                `;
+            }
+        }
+        function showFinalResults() {
+            const display = document.getElementById("display");
+            display.innerHTML = ""; // 清空原本的三選一畫面
+
+            const selectedCards = engine.getHistorySelectedCards();
+
+            // 2. 渲染這些卡片
+            selectedCards.forEach(opt => {
+                const cardDiv = document.createElement("div");
+                // 使用原本的 rarity class 來保持邊框顏色
+                cardDiv.className = `card ${opt.rarity}`; 
+                
+                cardDiv.innerHTML = `
+                    <div style="font-size: 10px; color: #c89b3c; margin-bottom: 5px;">已選定</div>
+                    <img src="${opt.augmentSmallIconPath || ''}" width="60"">
+                    <h3>${opt.nameTRA}</h3>
+                    <p>${opt.description}</p>
+                `;
+                // 結算畫面通常不需要重抽按鈕，所以這裡不放 button
+                display.appendChild(cardDiv);
+            });
+
+            // 額外美化：幫 display 容器加個動畫或樣式
+            display.style.border = "1px solid #c89b3c";
+            display.style.padding = "20px";
+            display.style.borderRadius = "10px";
+            display.style.background = "rgba(200, 155, 60, 0.05)";
+        }
+        window.onload = initApp;
+    </script>
+</body>
+</html>

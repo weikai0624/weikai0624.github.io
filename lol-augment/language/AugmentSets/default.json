@@ -1,0 +1,215 @@
+[
+    {
+        "Set name": "Archmage",
+        "Applicable Augments IDs": [
+            9,
+            2016,
+            56,
+            60,
+            311
+        ],
+        "Applicable Augments": [
+            "Buff Buddies",
+            "Juiced",
+            "Mind to Matter",
+            "Ocean Soul",
+            "Overflow"
+        ],
+        "Set bonus": "Whenever you cast an  ability, refund the cooldown of another, randomly selected ability by a percentage of the cast ability's  cooldown.",
+        "Effectiveness at double(2 set)": "30% cooldown refund",
+        "Effectiveness at triple(3 set)": "(Unchanged)",
+        "Effectiveness at quadruple(4 set)": "(Unchanged)"
+    },
+    {
+        "Set name": "Dive Bomb",
+        "Applicable Augments IDs": [
+            310,
+            25,
+            33228,
+            108
+        ],
+        "Applicable Augments": [
+            "Clown College",
+            "Dive Bomber",
+            "Final City Transit",
+            "Self Destruct"
+        ],
+        "Set bonus": "Reduce your  death timer by a percentage.",
+        "Effectiveness at double(2 set)": "25% shorter death timer",
+        "Effectiveness at triple(3 set)": "(Unchanged)",
+        "Effectiveness at quadruple(4 set)": "(Unchanged)"
+    },
+    {
+        "Set name": "Firecracker",
+        "Applicable Augments IDs": [
+            1356,
+            220,
+            1051,
+            133,
+            1415,
+            87
+        ],
+        "Applicable Augments": [
+            "Critical Missile",
+            "Fan the Hammer",
+            "Light 'em Up!",
+            "Magic Missile",
+            "Twin Fire",
+            "Typhoon"
+        ],
+        "Set bonus": "Firecrackers bounce a number of times to nearby enemies, dealing a percentage of their original damage.",
+        "Effectiveness at double(2 set)": "2 bounces, 25% effectiveness",
+        "Effectiveness at triple(3 set)": "(Unchanged)",
+        "Effectiveness at quadruple(4 set)": "3 bounces, 50% effectiveness"
+    },
+    {
+        "Set name": "Fully Automated",
+        "Applicable Augments IDs": [
+            1301,
+            308,
+            39,
+            61,
+            1421,
+            66,
+            108,
+            1420
+        ],
+        "Applicable Augments": [
+            "Divine Intervention",
+            "Firefox",
+            "Frost Wraith",
+            "OK Boomerang",
+            "Prom Queen",
+            "Quantum Computing",
+            "Self Destruct",
+            "Sonata"
+        ],
+        "Set bonus": "Reduce the cooldown of your automatic augments by a percentage.",
+        "Effectiveness at double(2 set)": "30% cooldown reduction",
+        "Effectiveness at triple(3 set)": "The cooldown of automatic augments now scales with your ability haste.",
+        "Effectiveness at quadruple(4 set)": "(Unchanged)"
+    },
+    {
+        "Set name": "High Roller",
+        "Applicable Augments IDs": [
+            317,
+            226,
+            227,
+            228,
+            243,
+            237,
+            238
+        ],
+        "Applicable Augments": [
+            "Pandora's Box",
+            "Stats!",
+            "Stats on Stats!",
+            "Stats on Stats on Stats!",
+            "Transmute: Chaos",
+            "Transmute: Gold",
+            "Transmute: Prismatic"
+        ],
+        "Set bonus": "Enemy  minions that die have a chance to drop a  Stat Anvil at the location of their death. You can pick up dropped anvils by moving over them. The obtained  Stat Anvils will be consumed once the shop is enabled again (after death or completing a  Recall with the  Cheating augment).",
+        "Effectiveness at double(2 set)": "9% chance for minion deaths to drop a  Stat Anvil",
+        "Effectiveness at triple(3 set)": "+20% chance to gain a Gold or Prismatic tier Stat Anvil selection from  Stat Anvils",
+        "Effectiveness at quadruple(4 set)": "+50% chance (total 70%) to gain a Gold or Prismatic tier Stat Anvil selection from  Stat Anvils"
+    },
+    {
+        "Set name": "Make it Rain",
+        "Applicable Augments IDs": [
+            1384,
+            38,
+            1335,
+            2001,
+            1391,
+            1320,
+            1319
+        ],
+        "Applicable Augments": [
+            "Donation",
+            "From Beginning to End",
+            "Goldrend",
+            "Heads Up Cupcake!",
+            "Red Envelopes",
+            "Upgrade: Collector",
+            "Upgrade: Immolate"
+        ],
+        "Set bonus": "Enemy champions that you score a  takedown against drop a number of coins at their corpse. You or allied champions can collect the coins by moving over them, granting  5 for each coin collected.",
+        "Effectiveness at double(2 set)": "6 dropped coins (total  30)",
+        "Effectiveness at triple(3 set)": "12 dropped coins (total  60)",
+        "Effectiveness at quadruple(4 set)": "(Unchanged)"
+    },
+    {
+        "Set name": "Snowday",
+        "Applicable Augments IDs": [
+            1329,
+            1392,
+            1358,
+            1342,
+            1334
+        ],
+        "Applicable Augments": [
+            "Biggest Snowball Ever",
+            "Holy Snowball",
+            "Pinball",
+            "Snowball Roulette",
+            "Snowball Upgrade"
+        ],
+        "Set bonus": "Increase the damage dealt by your  Mark's effects and gain summoner spell haste for it.",
+        "Effectiveness at double(2 set)": "30% increased damage, 50 haste",
+        "Effectiveness at triple(3 set)": "50% increased damage, 100 haste",
+        "Effectiveness at quadruple(4 set)": "100% increased damage, 150 haste"
+    },
+    {
+        "Set name": "Stackosaurus Rex",
+        "Applicable Augments IDs": [
+            1388,
+            54,
+            65,
+            1152,
+            1373,
+            136,
+            1375,
+            81,
+            1338
+        ],
+        "Applicable Augments": [
+            "Infinite Recursion",
+            "Master of Duality",
+            "Phenomenal Evil",
+            "Quest: Steel Your Heart",
+            "Shrink Engine",
+            "Slap Around",
+            "Soul Eater",
+            "Tap Dancer",
+            "Upgrade: Hubris"
+        ],
+        "Set bonus": "Increase the number of permanent stacks you gain from abilities.",
+        "Effectiveness at double(2 set)": "50% more stacks",
+        "Effectiveness at triple(3 set)": "100% more stacks",
+        "Effectiveness at quadruple(4 set)": "200% more stacks"
+    },
+    {
+        "Set name": "Wee Woo Wee Woo",
+        "Applicable Augments IDs": [
+            141,
+            118,
+            37,
+            1372,
+            1420,
+            95
+        ],
+        "Applicable Augments": [
+            "All For You",
+            "Critical Healing",
+            "First-Aid Kit",
+            "I'm a Baby Kitty Where is Mama",
+            "Sonata",
+            "Windspeaker's Blessing"
+        ],
+        "Set bonus": "Gain  bonus movement speed toward wounded allies and periodically empower your next  heal or  shield with an additional effect.",
+        "Effectiveness at double(2 set)": "Gain 50% bonus movement speed towards allies that are below 50% of their maximum health and within 650 units",
+        "Effectiveness at triple(3 set)": "Your next heal or shield also heals the target equal to 12% of their missing health (10 second cooldown).",
+        "Effectiveness at quadruple(4 set)": "(Unchanged)"
+    }
+]

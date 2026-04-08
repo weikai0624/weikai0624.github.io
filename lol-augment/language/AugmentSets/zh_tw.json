@@ -1,0 +1,224 @@
+[
+    {
+        "Set name": "Archmage",
+        "Applicable Augments IDs": [
+            9,
+            2016,
+            56,
+            60,
+            311
+        ],
+        "Applicable Augments": [
+            "Buff Buddies",
+            "Juiced",
+            "Mind to Matter",
+            "Ocean Soul",
+            "Overflow"
+        ],
+        "Set bonus": "任何對戰的堅實靠山。",
+        "Effectiveness at double(2 set)": "返還 30% 冷卻時間",
+        "Effectiveness at triple(3 set)": "(未改變)",
+        "Effectiveness at quadruple(4 set)": "(未改變)",
+        "SetNameTranslation": "大法師"
+    },
+    {
+        "Set name": "Dive Bomb",
+        "Applicable Augments IDs": [
+            310,
+            25,
+            33228,
+            108
+        ],
+        "Applicable Augments": [
+            "Clown College",
+            "Dive Bomber",
+            "Final City Transit",
+            "Self Destruct"
+        ],
+        "Set bonus": "投入死神的懷抱，使用增幅裝置造成真實傷害 ",
+        "Effectiveness at double(2 set)": "復活倒數時間縮短25%",
+        "Effectiveness at triple(3 set)": "(未改變)",
+        "Effectiveness at quadruple(4 set)": "(未改變)",
+        "SetNameTranslation": "喪鐘"
+    },
+    {
+        "Set name": "Firecracker",
+        "Applicable Augments IDs": [
+            1356,
+            220,
+            1051,
+            133,
+            1415,
+            87
+        ],
+        "Applicable Augments": [
+            "Critical Missile",
+            "Fan the Hammer",
+            "Light 'em Up!",
+            "Magic Missile",
+            "Twin Fire",
+            "Typhoon"
+        ],
+        "Set bonus": "飛彈很酷，多多益善。烈焰爆竹飛彈向鄰近敵軍額外彈跳多次，造成原本傷害的部分傷害。",
+        "Effectiveness at double(2 set)": "彈跳2次，造成25%的原技能傷害",
+        "Effectiveness at triple(3 set)": "(未改變)",
+        "Effectiveness at quadruple(4 set)": "彈跳3次，造成50%的原技能傷害",
+        "SetNameTranslation": "烈焰爆竹"
+    },
+    {
+        "Set name": "Fully Automated",
+        "Applicable Augments IDs": [
+            1301,
+            308,
+            39,
+            61,
+            1421,
+            66,
+            108,
+            1420
+        ],
+        "Applicable Augments": [
+            "Divine Intervention",
+            "Firefox",
+            "Frost Wraith",
+            "OK Boomerang",
+            "Prom Queen",
+            "Quantum Computing",
+            "Self Destruct",
+            "Sonata"
+        ],
+        "Set bonus": "讓大混戰工廠確實成長的第一步。",
+        "Effectiveness at double(2 set)": "自動施放冷卻時間縮短30%",
+        "Effectiveness at triple(3 set)": "自動施放冷卻時間受益於技能加速。",
+        "Effectiveness at quadruple(4 set)": "(未改變)",
+        "SetNameTranslation": "全自動"
+    },
+    {
+        "Set name": "High Roller",
+        "Applicable Augments IDs": [
+            317,
+            226,
+            227,
+            228,
+            243,
+            237,
+            238
+        ],
+        "Applicable Augments": [
+            "Pandora's Box",
+            "Stats!",
+            "Stats on Stats!",
+            "Stats on Stats on Stats!",
+            "Transmute: Chaos",
+            "Transmute: Gold",
+            "Transmute: Prismatic"
+        ],
+        "Set bonus": "你會100%閃過向你襲來的子彈——薩科——逆命（大概吧） ",
+        "Effectiveness at double(2 set)": "士兵死亡時有機會掉落能力值鐵砧。",
+        "Effectiveness at triple(3 set)": "獲得金級或稜鏡能力值鐵砧的機率：20%。",
+        "Effectiveness at quadruple(4 set)": "獲得金級或稜鏡鐵砧能力值的機率：50%。",
+        "SetNameTranslation": "土豪賭客"
+    },
+    {
+        "Set name": "Make it Rain",
+        "Applicable Augments IDs": [
+            1384,
+            38,
+            1335,
+            2001,
+            1391,
+            1320,
+            1319
+        ],
+        "Applicable Augments": [
+            "Donation",
+            "From Beginning to End",
+            "Goldrend",
+            "Heads Up Cupcake!",
+            "Red Envelopes",
+            "Upgrade: Collector",
+            "Upgrade: Immolate"
+        ],
+        "Set bonus": " 經濟決定一切。敵軍在被擊殺時現在會掉落金幣。掉落的金幣每枚賦予5金錢，只能由增幅裝置持有者和其友方英雄拾取。",
+        "Effectiveness at double(2 set)": "掉落6枚金幣，掉落的金幣每枚賦予5金錢",
+        "Effectiveness at triple(3 set)": "掉落12枚金幣，掉落的金幣每枚賦予5金錢",
+        "Effectiveness at quadruple(4 set)": "透過增幅裝置和擊殺獲得的金錢增加50%。",
+        "SetNameTranslation": "錢如雨下"
+    },
+    {
+        "Set name": "Snowday",
+        "Applicable Augments IDs": [
+            1329,
+            1392,
+            1358,
+            1342,
+            1334
+        ],
+        "Applicable Augments": [
+            "Biggest Snowball Ever",
+            "Holy Snowball",
+            "Pinball",
+            "Snowball Roulette",
+            "Snowball Upgrade"
+        ],
+        "Set bonus": "雪球失控啦！",
+        "Effectiveness at double(2 set)": "雪球獲得50技能加速，並造成額外30%傷害",
+        "Effectiveness at triple(3 set)": "雪球獲得100技能加速，並造成額外50%傷害",
+        "Effectiveness at quadruple(4 set)": "雪球獲得150技能加速，並造成額外100%傷害",
+        "SetNameTranslation": "降雪之日"
+    },
+    {
+        "Set name": "Stackosaurus Rex",
+        "Applicable Augments IDs": [
+            1388,
+            54,
+            65,
+            1152,
+            1373,
+            136,
+            1375,
+            81,
+            1338
+        ],
+        "Applicable Augments": [
+            "Infinite Recursion",
+            "Master of Duality",
+            "Phenomenal Evil",
+            "Quest: Steel Your Heart",
+            "Shrink Engine",
+            "Slap Around",
+            "Soul Eater",
+            "Tap Dancer",
+            "Upgrade: Hubris"
+        ],
+        "Set bonus": "堆層堆起來。累加推層時，獲得額外層數。",
+        "Effectiveness at double(2 set)": "獲得的層數提高50%。",
+        "Effectiveness at triple(3 set)": "獲得的層數提高100%。",
+        "Effectiveness at quadruple(4 set)": "獲得的層數提高200%。",
+        "SetNameTranslation": "堆層暴龍（疊疊龍）"
+    },
+    {
+        "Set name": "Wee Woo Wee Woo",
+        "Applicable Augments IDs": [
+            141,
+            118,
+            37,
+            1372,
+            1420,
+            95
+        ],
+        "Applicable Augments": [
+            "All For You",
+            "Critical Healing",
+            "First-Aid Kit",
+            "I'm a Baby Kitty Where is Mama",
+            "Sonata",
+            "Windspeaker's Blessing"
+        ],
+        "Set bonus": "對生命值低於 50% 的友軍獲得額外效果。",
+        "Effectiveness at double(2 set)": "獲得50%移動速度",
+        "Effectiveness at triple(3 set)": "你的下一次治療或護盾可以恢復目標已損失生命值的 12%（冷卻時間 10 秒）",
+        "Effectiveness at quadruple(4 set)": "(未改變)",
+        "SetNameTranslation": "嗚咿嗚咿(ㄟㄨㄟㄟ嗚嗚嗚喔喔)"
+    }
+]

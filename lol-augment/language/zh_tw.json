@@ -1,0 +1,1905 @@
+[
+    {
+        "nameTRA": "極度邪惡",
+        "description": "使用技能命中敵軍後，可永久增加1魔攻。若這是你拿的第二件增幅裝置，開始時有40魔攻。",
+        "id": 65,
+        "augmentSmallIconPath": "./icons/phenomenalevil_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Stackosaurus Rex"
+        ]
+    },
+    {
+        "nameTRA": "魔法導彈",
+        "description": "造成技能傷害會對目標發射3個爆竹，每個爆竹會根據飛行距離造成百分比最大生命的真實傷害。",
+        "id": 133,
+        "augmentSmallIconPath": "./icons/magicmissile_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Firecracker"
+        ]
+    },
+    {
+        "nameTRA": "吸血迷信",
+        "description": "你無法接受友軍治療，也無法獲得生命回復。獲得30%全能吸血。",
+        "id": 1346,
+        "augmentSmallIconPath": "./icons/vampired_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "質變：稜鏡",
+        "description": "獲得一件隨機稜鏡增幅裝置。",
+        "id": 238,
+        "augmentSmallIconPath": "./icons/transmuteprismatic_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "High Roller"
+        ]
+    },
+    {
+        "nameTRA": "阿嬤的辣油",
+        "description": "施加燃燒效果時，在附近澆上一灘辣油。辣油能回復生命，並使敵軍燃燒。施加越多燃燒，辣油效果越強。",
+        "id": 1406,
+        "augmentSmallIconPath": "./icons/grandmaschilioil_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "處刑者",
+        "description": "對生命低於30%的敵軍造成10%額外傷害。參與擊殺時，重置基礎技能。",
+        "id": 32,
+        "augmentSmallIconPath": "./icons/executioner_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "寶石手套",
+        "description": "技能可以暴擊。增加25%暴擊率。",
+        "id": 48,
+        "augmentSmallIconPath": "./icons/jeweledgauntlet_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "超狙武器",
+        "description": "增加200攻擊距離，遠攻英雄則減至增加100攻擊距離。",
+        "id": 71,
+        "augmentSmallIconPath": "./icons/scopierweapons_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "痛打一頓",
+        "description": "硬控場或禁錮敵軍時，獲得10適性之力。死亡時失去50%。",
+        "id": 136,
+        "augmentSmallIconPath": "./icons/slaparound_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": [
+            "Stackosaurus Rex"
+        ]
+    },
+    {
+        "nameTRA": "巨人殺手",
+        "description": "體型變小，獲得跑速，並根據目標英雄與自身體型差距造成額外傷害。",
+        "id": 195,
+        "augmentSmallIconPath": "./icons/giantslayer_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "縮小引擎",
+        "description": "參與擊殺會使體型變小，並賦予技能加速及跑速。死亡時失去65%堆層。",
+        "id": 1373,
+        "augmentSmallIconPath": "./icons/shrinkengine_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Stackosaurus Rex"
+        ]
+    },
+    {
+        "nameTRA": "暴擊沖天炮",
+        "description": "暴擊時，發射1+?個爆竹，每個爆竹造成?魔法傷害。此外，獲得25%暴擊率。",
+        "id": 1356,
+        "augmentSmallIconPath": "./icons/criticalmissile_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Firecracker"
+        ]
+    },
+    {
+        "nameTRA": "坦克引擎",
+        "description": "參與擊殺時獲得一層堆層，可增加體型和最大生命。死亡時失去層數。",
+        "id": 313,
+        "augmentSmallIconPath": "./icons/tank_engine_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "穿針引線",
+        "description": "獲得18%物理穿透與魔法穿透。",
+        "id": 84,
+        "augmentSmallIconPath": "./icons/threadtheneedle_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "飲血",
+        "description": "獲得15%全能吸血效果。",
+        "id": 138,
+        "augmentSmallIconPath": "./icons/goredrink_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "女巫思維",
+        "description": "增加?魔法攻擊。",
+        "id": 97,
+        "augmentSmallIconPath": "./icons/witchfulthinking_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "靈光一閃",
+        "description": "增加相當於30%魔攻的技能加速。",
+        "id": 30,
+        "augmentSmallIconPath": "./icons/eureka_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "食魂者",
+        "description": "對敵方英雄造成硬控場後，賦予20最大生命。",
+        "id": 1375,
+        "augmentSmallIconPath": "./icons/souleater_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Stackosaurus Rex"
+        ]
+    },
+    {
+        "nameTRA": "重磅爆發",
+        "description": "技能命中敵軍時，賦予你爆發堆層，縮短非大絕技能冷卻時間。",
+        "id": 2008,
+        "augmentSmallIconPath": "./icons/weightedpopoffs_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "任務：鋼鐵雄心",
+        "description": "條件：擁有300層以上的雄心之鋼。獎勵：雄心之鋼堆層乘以3倍。",
+        "id": 1152,
+        "augmentSmallIconPath": "./icons/quest_steelyourheart_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Stackosaurus Rex"
+        ]
+    },
+    {
+        "nameTRA": "自始至終",
+        "description": "獲得先發制人及靈魂收割關鍵符文。",
+        "id": 38,
+        "augmentSmallIconPath": "./icons/frombeginningtoend_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Make it Rain"
+        ]
+    },
+    {
+        "nameTRA": "殺戮時間",
+        "description": "施放大絕後，標記所有敵軍，並儲存對目標造成的傷害。倒數結束時，引爆傷害。",
+        "id": 211,
+        "augmentSmallIconPath": "./icons/itskillingtime_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "手腳麻利",
+        "description": "增加60%攻速。",
+        "id": 22,
+        "augmentSmallIconPath": "./icons/deft_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "電光石火",
+        "description": "增加20%總攻速。每秒普攻次數達1.75次時，造成額外魔法傷害命中效果。",
+        "id": 52,
+        "augmentSmallIconPath": "./icons/lightningstrikes_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "無限循環",
+        "description": "增加60技能加速，每次參與擊殺則額外增加3技能加速。",
+        "id": 1388,
+        "augmentSmallIconPath": "./icons/infiniterecursion_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": [
+            "Stackosaurus Rex"
+        ]
+    },
+    {
+        "nameTRA": "升級傲慢",
+        "description": "參與擊殺時，傲慢可讓你回復生命，並在增益效果持續期間提升跑速，恢復量與提升量都會隨著層數增加。此外，可獲得250金錢。",
+        "id": 1338,
+        "augmentSmallIconPath": "./icons/upgradehubris_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Stackosaurus Rex"
+        ]
+    },
+    {
+        "nameTRA": "質變：金級",
+        "description": "獲得一件隨機金色增幅裝置。",
+        "id": 237,
+        "augmentSmallIconPath": "./icons/transmutegold_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": [
+            "High Roller"
+        ]
+    },
+    {
+        "nameTRA": "升級收藏家",
+        "description": "以蒐集者的被動效果處決敵軍時，會提升處決門檻並獲得額外金錢。獲得250金錢。",
+        "id": 1320,
+        "augmentSmallIconPath": "./icons/upgradecollector_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": [
+            "Make it Rain"
+        ]
+    },
+    {
+        "nameTRA": "狂躁！",
+        "description": "參與擊殺時，增加跑速和攻速，持續4秒。",
+        "id": 1322,
+        "augmentSmallIconPath": "./icons/getexcited_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "煉獄使者",
+        "description": "技能附加可累加的燃燒，此效果會持續造成傷害。你施加的燃燒效果可縮短基礎技能冷卻時間。",
+        "id": 45,
+        "augmentSmallIconPath": "./icons/infernalconduit_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "颱風",
+        "description": "普攻會朝額外一名目標射出爆竹，造成較低傷害，並附加命中效果。",
+        "id": 87,
+        "augmentSmallIconPath": "./icons/typhoon_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": [
+            "Firecracker"
+        ]
+    },
+    {
+        "nameTRA": "能力值堆起來！",
+        "description": "獲得4個能力值鐵砧，並有較高機會是黃金或稜鏡鐵砧！",
+        "id": 227,
+        "augmentSmallIconPath": "./icons/statsonstats_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "High Roller"
+        ]
+    },
+    {
+        "nameTRA": "天界之身",
+        "description": "增加1250生命，但造成的傷害降低10%。",
+        "id": 13,
+        "augmentSmallIconPath": "./icons/celestialbody_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "溢流",
+        "description": "技能的魔力消耗加倍。技能的治療、護盾以及傷害提升，提升幅度取決於最大魔力。",
+        "id": 311,
+        "augmentSmallIconPath": "./icons/overflow_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Archmage"
+        ]
+    },
+    {
+        "nameTRA": "暴擊治療",
+        "description": "你的治療與護盾可以暴擊，治療量或護盾量提升40%。增加 25%暴擊率。",
+        "id": 118,
+        "augmentSmallIconPath": "./icons/criticalhealing_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Wee Woo Wee Woo"
+        ]
+    },
+    {
+        "nameTRA": "普羅能量炮",
+        "description": "你持續收集普羅。對敵軍造成傷害時，朝目標發射所有普羅，每隻造成最大生命的真實傷害，並將其短暫擊退。",
+        "id": 1409,
+        "augmentSmallIconPath": "./icons/poroblast_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "煽動群眾",
+        "description": "施放技能時回復?生命。",
+        "id": 67,
+        "augmentSmallIconPath": "./icons/rabblerousing_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "虛空裂縫",
+        "description": "使用技能對敵軍造成傷害時，產生一道虛空裂痕。如附近有另一道虛空裂痕，它們會被吞沒並在中間產生一道裂縫，對範圍內的敵軍造成魔法傷害和緩速效果。",
+        "id": 2002,
+        "augmentSmallIconPath": "./icons/voidrift_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "雙刀流",
+        "description": "普攻會射出一道箭矢，施加命中效果但威力減弱。增加20%總攻速。",
+        "id": 225,
+        "augmentSmallIconPath": "./icons/dualwield_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "極限衝鋒",
+        "description": "使用技能對敵方英雄造成傷害時，增加200跑速，在1秒內衰減至失效。",
+        "id": 1405,
+        "augmentSmallIconPath": "./icons/speeddemon_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "輕舞飛揚",
+        "description": "普攻可增加跑速。根據跑速獲得攻速。",
+        "id": 81,
+        "augmentSmallIconPath": "./icons/tapdancer_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": [
+            "Stackosaurus Rex"
+        ]
+    },
+    {
+        "nameTRA": "靈活轉換",
+        "description": "將額外物攻轉換為魔攻。增加15%魔攻。",
+        "id": 205,
+        "augmentSmallIconPath": "./icons/adapt_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "頂狙武器",
+        "description": "增加250攻擊距離，遠攻英雄則減至150。",
+        "id": 115,
+        "augmentSmallIconPath": "./icons/scopiestweapons_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "射程強化改造",
+        "description": "增加75攻擊距離，遠攻英雄則減至只增加50攻擊距離。",
+        "id": 1170,
+        "augmentSmallIconPath": "./icons/scopedweapons_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "剛毅",
+        "description": "增加大量生命回復，生命低於一定值時增加更多。",
+        "id": 64,
+        "augmentSmallIconPath": "./icons/perseverance_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "紅包",
+        "description": "紅包會隨機出現在你周圍。將其撿起即可獲得金錢與少量隨機能力值。",
+        "id": 1391,
+        "augmentSmallIconPath": "./icons/redenvelopes_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Make it Rain"
+        ]
+    },
+    {
+        "nameTRA": "射手法師",
+        "description": "你的普攻造成等同於75%魔攻的額外物理傷害。",
+        "id": 129,
+        "augmentSmallIconPath": "./icons/marksmage_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "暴擊節奏",
+        "description": "增加25%暴擊率。普攻暴擊時會累加攻速。",
+        "id": 1328,
+        "augmentSmallIconPath": "./icons/criticalrhythm_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "巨人",
+        "description": "體型變大，增加35%生命及15%適性之力。",
+        "id": 41,
+        "augmentSmallIconPath": "./icons/goliath_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "循環利用",
+        "description": "增加60技能加速。",
+        "id": 68,
+        "augmentSmallIconPath": "./icons/recursion_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "二次三次",
+        "description": "每第三次普攻會觸發兩次命中效果。",
+        "id": 107,
+        "augmentSmallIconPath": "./icons/twicethrice_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "斗內",
+        "description": "獲得2500金錢。別問那麼多。",
+        "id": 1384,
+        "augmentSmallIconPath": "./icons/donation_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Make it Rain"
+        ]
+    },
+    {
+        "nameTRA": "雙響炮",
+        "description": "造成技能傷害時，發射1+?個爆竹，每個爆竹造成?魔法傷害。此外，獲得15%暴擊率。",
+        "id": 1415,
+        "augmentSmallIconPath": "./icons/twinfire_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": [
+            "Firecracker"
+        ]
+    },
+    {
+        "nameTRA": "升級無盡之刃",
+        "description": "獲得25%暴擊率和500金錢。持有無盡之刃時，每次普攻可從暴擊率獲得隨機暴擊傷害。",
+        "id": 1336,
+        "augmentSmallIconPath": "./icons/upgradeie_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "火狐",
+        "description": "自動施放獲得跑速並召喚三團環繞你的火焰，指定最靠近的可見敵軍並造成適性傷害。",
+        "id": 308,
+        "augmentSmallIconPath": "./icons/firfox_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": [
+            "Fully Automated"
+        ]
+    },
+    {
+        "nameTRA": "亮起來！",
+        "description": "每第4次普攻發射4個鞭炮，造成魔法傷害 命中效果。",
+        "id": 1051,
+        "augmentSmallIconPath": "./icons/lightemup_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": [
+            "Firecracker"
+        ]
+    },
+    {
+        "nameTRA": "質變：大混亂",
+        "description": "獲得2件隨機增幅裝置。",
+        "id": 243,
+        "augmentSmallIconPath": "./icons/transmutechaos_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": [
+            "High Roller"
+        ]
+    },
+    {
+        "nameTRA": "重型打手",
+        "description": "你的普攻額外造成等同於自身最大生命3.5%的物理傷害。",
+        "id": -1,
+        "augmentSmallIconPath": "./icons/heavy_hitter_large.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "雪地踱步",
+        "description": "造成的緩速效果額外降低100跑速。",
+        "id": 44,
+        "augmentSmallIconPath": "./icons/icecold_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "因心成體",
+        "description": "增加最大生命，增加量為魔力的一半。",
+        "id": 56,
+        "augmentSmallIconPath": "./icons/mindtomatter_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": [
+            "Archmage"
+        ]
+    },
+    {
+        "nameTRA": "帽上加帽",
+        "description": "頭部道具提供額外魔攻和魔防。",
+        "id": 1341,
+        "augmentSmallIconPath": "./icons/hatonahat_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "奪命飛踢",
+        "description": "普攻會處決低生命的敵方英雄、造成擊退並引發爆炸，同時回復自身生命。",
+        "id": 2006,
+        "augmentSmallIconPath": "./icons/dropkick_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "小丑學院",
+        "description": "獲得「欺詐魔術」召喚師技能。獲得「背刺」被動技能。死亡時生成一個會爆炸的盒子，對鄰近敵軍造成大量真實傷害和恐懼效果。",
+        "id": 310,
+        "augmentSmallIconPath": "./icons/clowncollege_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": [
+            "Dive Bomb"
+        ]
+    },
+    {
+        "nameTRA": "飛影跑法",
+        "description": "使用衝刺、閃現或傳送技能或脫離潛行後，增加跑速。",
+        "id": 73,
+        "augmentSmallIconPath": "./icons/shadowrunner_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "符文術士",
+        "description": "獲得召喚：艾莉及奧術彗星關鍵符文。",
+        "id": 50,
+        "augmentSmallIconPath": "./icons/keystoneconjurer_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "急救箱",
+        "description": "增加20%治療與護盾強度。",
+        "id": 37,
+        "augmentSmallIconPath": "./icons/firstaidkit_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": [
+            "Wee Woo Wee Woo"
+        ]
+    },
+    {
+        "nameTRA": "能力值！",
+        "description": "獲得3個能力值鐵砧！",
+        "id": 226,
+        "augmentSmallIconPath": "./icons/stats_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": [
+            "High Roller"
+        ]
+    },
+    {
+        "nameTRA": "靈魂虹吸",
+        "description": "增加25%暴擊率，暴擊時會附帶12%普攻吸血。",
+        "id": 77,
+        "augmentSmallIconPath": "./icons/soulsiphon_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "最終型態",
+        "description": "施放大絕後，獲得最大生命護盾、全能吸血以及跑速，持續10秒。",
+        "id": 1344,
+        "augmentSmallIconPath": "./icons/finalform_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "任務：烏莉特的法帽",
+        "description": "立即：獲得巨型魔棒。資格：擁有死亡之帽和中婭沙漏。獎勵：獲得烏莉特的法帽",
+        "id": 156,
+        "augmentSmallIconPath": "./icons/quest_woogletswitchcap_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "細煮慢燉",
+        "description": "每秒對鄰近敵方英雄附加可無限累加的燃燒，傷害隨你的最大生命成長。",
+        "id": 75,
+        "augmentSmallIconPath": "./icons/slowcooker_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "終城快車",
+        "description": "死亡時，朝擊殺者發出一列火車，對命中的敵軍造成?物理傷害。列車沿途不停靠喔。",
+        "id": 33228,
+        "augmentSmallIconPath": "./icons/9189_train.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": [
+            "Dive Bomb"
+        ]
+    },
+    {
+        "nameTRA": "能力值堆堆堆起來！",
+        "description": "獲得5個能力值鐵砧，並有較高機會是黃金或稜鏡鐵砧！下次選擇增幅裝置時，每個欄位可額外重抽一次。",
+        "id": 228,
+        "augmentSmallIconPath": "./icons/statsonstatsonstats_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": [
+            "High Roller"
+        ]
+    },
+    {
+        "nameTRA": "又快又穩",
+        "description": "衝刺或閃現後獲得護盾。",
+        "id": 1315,
+        "augmentSmallIconPath": "./icons/swiftandsafe_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "雙重命中",
+        "description": "暴擊額外施加一次命中效果。增加暴擊率。",
+        "id": 2010,
+        "augmentSmallIconPath": "./icons/doubletap_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "逃跑計畫",
+        "description": "達到35%生命時，獲得大量逐漸衰減的護盾、逐漸衰減的跑速，以及逐漸恢復的縮小效果。",
+        "id": 1333,
+        "augmentSmallIconPath": "./icons/escapeplan_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "俠盜恆毅",
+        "description": "使用衝刺、閃現或傳送技能後，增加12物防和魔防，最多5層。",
+        "id": 63,
+        "augmentSmallIconPath": "./icons/outlawsgrit_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "自爆炸彈客",
+        "description": "死亡時爆炸，造成大量真實傷害。",
+        "id": 25,
+        "augmentSmallIconPath": "./icons/divebomber_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": [
+            "Dive Bomb"
+        ]
+    },
+    {
+        "nameTRA": "溫泉加速",
+        "description": "獲得100%跑速，受到傷害後失效3秒。",
+        "id": 1105,
+        "augmentSmallIconPath": "./icons/homeguard_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "奏鳴曲",
+        "description": "每隔10秒自動輪替施放堅毅詠嘆調和迅捷奏鳴曲。堅毅詠嘆調使鄰近友軍回復生命，並暫時獲得護盾靈氣。迅捷奏鳴曲暫時賦予可增加跑速的靈氣。",
+        "id": 1420,
+        "augmentSmallIconPath": "./icons/sonata_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Fully Automated",
+            "Wee Woo Wee Woo"
+        ]
+    },
+    {
+        "nameTRA": "增益麻吉",
+        "description": "你獲得力量的餘燼和智慧的餘燼。",
+        "id": 9,
+        "augmentSmallIconPath": "./icons/buffbuddies_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": [
+            "Archmage"
+        ]
+    },
+    {
+        "nameTRA": "棒棒回力鏢",
+        "description": "每10秒自動施放，對鄰近敵軍發射回力鏢。",
+        "id": 61,
+        "augmentSmallIconPath": "./icons/okboomerang_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Fully Automated"
+        ]
+    },
+    {
+        "nameTRA": "任務：伊卡西亞殞落",
+        "description": "立即：獲得1件巴米灰燼，並可購買2件獻祭道具。條件：持有日炎聖盾和虛偽光彩。獎勵：這些道具能融合成虛空獻祭。",
+        "id": 1361,
+        "augmentSmallIconPath": "./icons/quest_voidimmolation_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "海洋之魂",
+        "description": "獲得海洋之魂，對敵軍造成傷害後可增加大量生命及魔力回復。",
+        "id": 60,
+        "augmentSmallIconPath": "./icons/oceansoul_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": [
+            "Archmage"
+        ]
+    },
+    {
+        "nameTRA": "靈魂淨化",
+        "description": "參與擊殺時會產生爆炸，使鄰近敵軍緩速60%，並根據其當前生命造成傷害。",
+        "id": 1345,
+        "augmentSmallIconPath": "./icons/spiritualpurification_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "老練狙擊手",
+        "description": "在遠距離以非大絕技能命中敵軍時，可縮短冷卻時間80%(持續性技能為65%)。",
+        "id": 113,
+        "augmentSmallIconPath": "./icons/skilledsniper_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "旋風鎚",
+        "description": "普攻會額外射出5個爆竹，這些爆竹的傷害量會隨距離增加。每個方向的冷卻時間各不相同。",
+        "id": 220,
+        "augmentSmallIconPath": "./icons/fanthehammer_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": [
+            "Firecracker"
+        ]
+    },
+    {
+        "nameTRA": "土司和奶油",
+        "description": "你的Q獲得100技能加速。",
+        "id": 103,
+        "augmentSmallIconPath": "./icons/breadandbutter_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "祕術拳擊",
+        "description": "命中效果縮短技能冷卻時間1.25秒。",
+        "id": 58,
+        "augmentSmallIconPath": "./icons/mysticpunch_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "兇殘之柄",
+        "description": "增加20物攻、10技能加速、以及5物理致命。",
+        "id": 82,
+        "augmentSmallIconPath": "./icons/thebrutalizer_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "煽風點火",
+        "description": "普攻命中效果造成燃燒效果，並持續造成傷害，可無限累加。",
+        "id": 36,
+        "augmentSmallIconPath": "./icons/firebrand_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "雪球升級",
+        "description": "讓你的雪球獲得50技能加速。命中敵軍時會降雪，造成範圍傷害並使鄰近敵軍緩速。若你沒有雪球就會獲得一顆雪球。",
+        "id": 1334,
+        "augmentSmallIconPath": "./icons/snowballupgrade_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Snowday"
+        ]
+    },
+    {
+        "nameTRA": "煉獄惡靈",
+        "description": "獲得煉獄惡靈，使用技能或普攻命中敵軍時，可額外造成傷害。",
+        "id": 46,
+        "augmentSmallIconPath": "./icons/infernalsoul_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "暗夜潛行",
+        "description": "對敵方英雄造成傷害後，在3秒內參與擊殺他們，會讓你進入隱形狀態。",
+        "id": 1326,
+        "augmentSmallIconPath": "./icons/nightstalking_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "自我毀滅",
+        "description": "每25秒，在自身放置一顆炸彈。炸彈在5秒後爆炸，造成真實傷害並擊飛敵軍。",
+        "id": 108,
+        "augmentSmallIconPath": "./icons/selfdestruct_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": [
+            "Dive Bomb",
+            "Fully Automated"
+        ]
+    },
+    {
+        "nameTRA": "狂戰士",
+        "description": "增加@Calc_Crit_Chance@暴擊率和@Calc_AS@攻速。",
+        "id": 2009,
+        "augmentSmallIconPath": "./icons/zealot_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "升級中婭沙漏",
+        "description": "將中婭沙漏的冷卻時間縮短至45秒。你現在處於中婭沙漏、探索者護腕或烏莉特的法帽的凝滯狀態時可以移動。獲得250金錢。",
+        "id": 1318,
+        "augmentSmallIconPath": "./icons/upgradezh_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "作弊",
+        "description": "點按回城即可返回基地、購買道具並獲得增幅裝置。",
+        "id": 1313,
+        "augmentSmallIconPath": "./icons/cheating_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "穩紮穩打",
+        "description": "攻速變為0.62。所有額外攻速轉換為物攻。(每1%攻速轉換為25+?物攻)。",
+        "id": 250,
+        "augmentSmallIconPath": "./icons/slowandsteady_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "見縫插針",
+        "description": "道具與持續傷害效果可以暴擊。增加25%暴擊率。",
+        "id": 92,
+        "augmentSmallIconPath": "./icons/vulnerability_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "戰爭交響曲",
+        "description": "獲得致命節奏與征服者關鍵符文。",
+        "id": 79,
+        "augmentSmallIconPath": "./icons/symphonyofwar_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "雪球輪盤",
+        "description": "雪球獲得100技能加速。命中敵軍後，對自己隨機施放一個有益的召喚師技能，並對目標隨機施放一個有害的召喚師技能。接著重施對自己有益的技能。若無雪球，則獲得一顆雪球。",
+        "id": 1342,
+        "augmentSmallIconPath": "./icons/snowballupgrade_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Snowday"
+        ]
+    },
+    {
+        "nameTRA": "土司和起司",
+        "description": "你的E獲得100技能加速。",
+        "id": 151,
+        "augmentSmallIconPath": "./icons/breadandcheese_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "聖光顯靈",
+        "description": "戰鬥開始15秒後，召喚一顆守護之星緩慢降臨在你身上。當它落地，你和附近的友軍獲得幾秒鐘的無敵狀態。隨後每隔35秒自動施放一次。",
+        "id": 1301,
+        "augmentSmallIconPath": "./icons/slowactingpainkillers_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Fully Automated"
+        ]
+    },
+    {
+        "nameTRA": "轉換惡作劇",
+        "description": "將魔攻轉換為額外物攻。增加15%物攻。",
+        "id": 206,
+        "augmentSmallIconPath": "./icons/escapade_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "痛恨一擊",
+        "description": "增加50%暴擊率。",
+        "id": 47,
+        "augmentSmallIconPath": "./icons/itscritical_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "頂尖發明家",
+        "description": "獲得100道具加速(等同於50%道具冷卻時間減免)。道具加速會縮短所有道具技能的冷卻時間。",
+        "id": 2,
+        "augmentSmallIconPath": "./icons/apexinventor_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "彈珠台",
+        "description": "你的雪球獲得50技能加速，且會造成額外?真實傷害。雪球碰到牆體反彈時，體積和傷害會增加，並縮短冷卻時間。",
+        "id": 1358,
+        "augmentSmallIconPath": "./icons/pinballsnowball_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Snowday"
+        ]
+    },
+    {
+        "nameTRA": "殘忍",
+        "description": "硬控場或禁錮英雄時，召喚一顆於短暫延遲後墜落的彗星，對鄰近敵軍造成魔法傷害。",
+        "id": 1323,
+        "augmentSmallIconPath": "./icons/cruelty_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "寒霜幽魂",
+        "description": "每6.5秒自動施放，對鄰近敵軍造成定身效果，持續1.25秒。",
+        "id": 39,
+        "augmentSmallIconPath": "./icons/frostwraith_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": [
+            "Fully Automated"
+        ]
+    },
+    {
+        "nameTRA": "幻影武器",
+        "description": "技能會施加命中效果效果。對每個目標有1秒冷卻時間。",
+        "id": 29,
+        "augmentSmallIconPath": "./icons/etherealweapon_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "不可通行",
+        "description": "獲得裂地衝擊與冰川增幅關鍵符文。",
+        "id": 149,
+        "augmentSmallIconPath": "./icons/impassable_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "超強大腦",
+        "description": "每有 1魔攻增加3護盾。死亡時刷新。",
+        "id": 180,
+        "augmentSmallIconPath": "./icons/bigbrain_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "土司和果醬",
+        "description": "你的W獲得100技能加速。",
+        "id": 150,
+        "augmentSmallIconPath": "./icons/breadandjam_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "巨無霸雪球",
+        "description": "雪球增加100技能加速。你的雪球超大且會穿過士兵。雪球會緩速、擊飛英雄並造成額外傷害。若你沒有雪球就會獲得一顆雪球。",
+        "id": 1329,
+        "augmentSmallIconPath": "./icons/biggestsnowballever_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": [
+            "Snowday"
+        ]
+    },
+    {
+        "nameTRA": "縮小光線",
+        "description": "你的普攻可以降低敵軍造成的傷害15%，持續3秒。",
+        "id": 74,
+        "augmentSmallIconPath": "./icons/shrinkray_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "升級閃耀劍",
+        "description": "魔法彎刀的效果會造成額外傷害，並依目標生命的一定比例治療你。此外，可獲得250金錢。",
+        "id": 1996,
+        "augmentSmallIconPath": "./icons/upgradesheen_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "惡趣味",
+        "description": "硬控場或禁錮敵方英雄時使你回復生命。",
+        "id": 42,
+        "augmentSmallIconPath": "./icons/guiltypleasure_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "衝鋒",
+        "description": "施放衝刺、跳躍、閃現或傳送技能會獲得175技能加速。",
+        "id": 19,
+        "augmentSmallIconPath": "./icons/dashing_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "腿部訓練日",
+        "description": "獲得50跑速和40%緩速抗性。",
+        "id": 305,
+        "augmentSmallIconPath": "./icons/legday_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "雙修大師",
+        "description": "普攻可累加魔攻，技能則可增加物攻。",
+        "id": 54,
+        "augmentSmallIconPath": "./icons/masterofduality_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": [
+            "Stackosaurus Rex"
+        ]
+    },
+    {
+        "nameTRA": "意志堅定",
+        "description": "每次硬控場或禁錮敵軍時，增加雙防。",
+        "id": 1327,
+        "augmentSmallIconPath": "./icons/adamant_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "急遽成長",
+        "description": "獲得召喚師技能「急遽成長」。「急遽成長」會使你體型瞬間變大，擊飛鄰近敵軍並賦予你最大生命。",
+        "id": 1401,
+        "augmentSmallIconPath": "./icons/growthspurt_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "全部都給你",
+        "description": "對友軍使用時，你的治療和護盾效果提升30%。",
+        "id": 141,
+        "augmentSmallIconPath": "./icons/allforyou_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": [
+            "Wee Woo Wee Woo"
+        ]
+    },
+    {
+        "nameTRA": "蠻力重擊",
+        "description": "增加20%物攻。",
+        "id": 7,
+        "augmentSmallIconPath": "./icons/bluntforce_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "巨像之勇氣",
+        "description": "在硬控場或禁錮敵方英雄後獲得?護盾。",
+        "id": 1018,
+        "augmentSmallIconPath": "./icons/courageofthecolossus_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "升級獻祭",
+        "description": "每有一名受獻祭影響的目標，虛偽光彩和日炎聖盾賦予10金錢。獲得250金錢。",
+        "id": 1319,
+        "augmentSmallIconPath": "./icons/upgradeimmolate_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": [
+            "Make it Rain"
+        ]
+    },
+    {
+        "nameTRA": "侵蝕裝甲",
+        "description": "對敵軍造成傷害可累加一層物理與魔法防禦削弱，持續4秒。",
+        "id": 28,
+        "augmentSmallIconPath": "./icons/erosion_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "舞會皇后",
+        "description": "每隔25秒自動施放，以閃亮寶冠為自己加冕。戴上寶冠時，獲得銳空的大絕，可魅惑觸碰到的敵軍。",
+        "id": 1421,
+        "augmentSmallIconPath": "./icons/promqueen_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": [
+            "Fully Automated"
+        ]
+    },
+    {
+        "nameTRA": "終極革新",
+        "description": "施放大絕後重置其冷卻時間(冷卻時間75秒，或在死亡時重置)。",
+        "id": 88,
+        "augmentSmallIconPath": "./icons/ultimaterevolution_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "回復不休",
+        "description": "移動時持續回復生命。",
+        "id": 70,
+        "augmentSmallIconPath": "./icons/restlessrestoration_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "劍舞之心",
+        "description": "獲得召喚師技能華爾茲劍舞。",
+        "id": 6,
+        "augmentSmallIconPath": "./icons/bladewaltz_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "大絕覺醒",
+        "description": "增加30大絕加速。施放大絕後，重置基礎技能並增加300基礎技能加速，持續15秒(冷卻時間20秒)。",
+        "id": 1349,
+        "augmentSmallIconPath": "./icons/zerohour_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "不死魔舞",
+        "description": "獲得瞬疾步法及不死之握關鍵符文。",
+        "id": 23,
+        "augmentSmallIconPath": "./icons/demonsdance_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "神聖之火",
+        "description": "治療或賦予護盾時，可對鄰近敵軍附加可無限累加的燃燒效果，在數秒內造成部分最大生命的魔法傷害。",
+        "id": 198,
+        "augmentSmallIconPath": "./icons/holyfire_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "小心杯子蛋糕！",
+        "description": "杯子蛋糕會不時飛過大橋。接住杯子蛋糕的玩家可獲得金錢，而被杯子蛋糕砸中的第一個英雄及其鄰近友軍會回復生命。根據治療量獲得金錢。",
+        "id": 2001,
+        "augmentSmallIconPath": "./icons/watchoutgrapefruit_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": [
+            "Make it Rain"
+        ]
+    },
+    {
+        "nameTRA": "海克斯科技龍魂",
+        "description": "每過一段時間，下一次傷害性技能或普攻會對附近敵人觸發連鎖的閃電炸裂，造成傷害與緩速。",
+        "id": 1416,
+        "augmentSmallIconPath": "./icons/infernalsoul_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "玻璃大砲",
+        "description": "最大生命減少30%。造成額外15%的真實傷害。",
+        "id": 33307,
+        "augmentSmallIconPath": "./icons/glasscannon_large.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "量子計算",
+        "description": "定期自動施放一次大範圍斬擊。敵軍遭命中時會緩速，額外承受最大生命傷害，並讓你回復生命。",
+        "id": 66,
+        "augmentSmallIconPath": "./icons/quantumcomputing_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": [
+            "Fully Automated"
+        ]
+    },
+    {
+        "nameTRA": "無敵大絕",
+        "description": "使用大絕後會免疫控場效果3秒(冷卻時間：8秒)。",
+        "id": 112,
+        "augmentSmallIconPath": "./icons/ultimateunstoppable_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "腳程加速",
+        "description": "獲得等同於技能加速100%的跑速。",
+        "id": -1,
+        "augmentSmallIconPath": "./icons/withhaste_large.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "黎明使者之決意",
+        "description": "生命低於50%時，在3秒內回復30%最大生命。每45秒或死亡時重置。",
+        "id": 20,
+        "augmentSmallIconPath": "./icons/dawnbringersresolve_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "烈焰折磨",
+        "description": "硬控場或禁錮敵方英雄時對其施加一項燃燒效果，造成持續傷害，可無限累加。",
+        "id": 85,
+        "augmentSmallIconPath": "./icons/tormentor_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "收頭好手",
+        "description": "跑向低生命敵軍時，增加跑速。",
+        "id": 2026,
+        "augmentSmallIconPath": "./icons/killsecure_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "升級荊棘之甲",
+        "description": "脫離戰鬥?秒後，你的「荊棘之甲」或「刺藤胸甲」生成外殼，反彈更多普攻傷害。",
+        "id": 1411,
+        "augmentSmallIconPath": "./icons/upgradecollector_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "地獄三頭犬",
+        "description": "獲得刀鋒之雹及強攻關鍵符文。",
+        "id": 323,
+        "augmentSmallIconPath": "./icons/cerberus_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "拔劍吧",
+        "description": "變為近戰並增加物攻、生命、攻速、吸血以及跑速(成長幅度取決於你犧牲的距離)。",
+        "id": 134,
+        "augmentSmallIconPath": "./icons/drawyoursword_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "黃金撕裂",
+        "description": "以普攻或技能傷害英雄時，造成額外魔法傷害，並獲得金錢和跑速。",
+        "id": 1335,
+        "augmentSmallIconPath": "./icons/goldrend_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": [
+            "Make it Rain"
+        ]
+    },
+    {
+        "nameTRA": "餘音震盪",
+        "description": "強化、治療、或賦予友軍護盾時，會對友軍周圍的敵人造成傷害與緩速。",
+        "id": 76,
+        "augmentSmallIconPath": "./icons/sonicboom_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "神聖雪球",
+        "description": "雪球增加100技能加速。使用雪球衝刺時，短暫進入無敵狀態。若你沒有雪球就會獲得一顆雪球。",
+        "id": 1392,
+        "augmentSmallIconPath": "./icons/goldensnowball_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": [
+            "Snowday"
+        ]
+    },
+    {
+        "nameTRA": "彈幕神童",
+        "description": "從遠處對敵方英雄造成傷害後，向對方發射精準彈幕。",
+        "id": 86,
+        "augmentSmallIconPath": "./icons/trueshotprodigy_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "閃光俠",
+        "description": "你可以使用3次閃現。120秒後，恢復所有使用次數。",
+        "id": 116,
+        "augmentSmallIconPath": "./icons/flashy_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "蛋白飲",
+        "description": "根據額外物防和魔防，增加?%治療量和護盾量。",
+        "id": 1324,
+        "augmentSmallIconPath": "./icons/proteinshake_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "深割",
+        "description": "增加50%攻速。命中時造成真實傷害，傷害隨物防增加。",
+        "id": 1321,
+        "augmentSmallIconPath": "./icons/darksteeltalons_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "毫髮無傷",
+        "description": "你可以根據自身暴擊率進行完美防禦（上限為50%機率），觸發時減少承受的傷害。增加25%暴擊率。",
+        "id": 80,
+        "augmentSmallIconPath": "./icons/tankitorleaveit_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "死亡循環",
+        "description": "施展治療和生命回復時，也會對最靠近的敵方英雄造成魔法傷害。",
+        "id": 15,
+        "augmentSmallIconPath": "./icons/circleofdeath_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "妖精魔法",
+        "description": "使用大絕造成傷害會變形敵軍幾秒。",
+        "id": 194,
+        "augmentSmallIconPath": "./icons/feymagic_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "刃下狂風",
+        "description": "物理穿透和魔法穿透越高，跑速越快。",
+        "id": 1316,
+        "augmentSmallIconPath": "./icons/windbeneathblade_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "強化攻擊",
+        "description": "命中會消耗@Calc_Mana_Cost@魔力造成@Calc_Damage@魔法傷害，此傷害可暴擊。",
+        "id": 2016,
+        "augmentSmallIconPath": "./icons/juiced_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": [
+            "Archmage"
+        ]
+    },
+    {
+        "nameTRA": "觸發地獄火狂襲",
+        "description": "獲得敢死風采。煞氣達S級時，自動使用「地獄火狂襲」\\n\\n敢死風采：使用跟上次不同的普攻或技能對英雄造成傷害時，獲得煞氣(有F級到S級)。煞氣會增加跑速。\\n地獄火狂襲：發射彈幕，對鄰近敵軍造成物理傷害。\\n",
+        "id": 2005,
+        "augmentSmallIconPath": "./icons/madscientist_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "不祥契約",
+        "description": "根據已損失生命獲得魔攻、跑速和全能吸血，每次施放技能都會受到傷害。",
+        "id": 1332,
+        "augmentSmallIconPath": "./icons/wisdomofages_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "風語者的祝福",
+        "description": "治療與護盾效果同時會增加目標的物理防禦與魔法防禦3秒。",
+        "id": 95,
+        "augmentSmallIconPath": "./icons/windspeakersblessing_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": [
+            "Wee Woo Wee Woo"
+        ]
+    },
+    {
+        "nameTRA": "無法掌握",
+        "description": "施放大絕時，進入無敵狀態，持續一小段時間。",
+        "id": 1011,
+        "augmentSmallIconPath": "./icons/canttouchthis_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "裂地龍魂",
+        "description": "獲得裂地龍魂，脫離戰鬥一段時間後可獲得一道護盾。",
+        "id": 1057,
+        "augmentSmallIconPath": "./icons/mountainsoul_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "暴擊和施法",
+        "description": "獲得相當於自身40%暴擊率的技能加速。",
+        "id": 2024,
+        "augmentSmallIconPath": "./icons/critncast_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "灼熱黎明",
+        "description": "技能會標記敵軍，隊友的下一次普攻或技能會對其額外造成魔法傷害。",
+        "id": 72,
+        "augmentSmallIconPath": "./icons/searingdawn_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "守護面紗",
+        "description": "每30秒獲得一道法術護盾，可阻擋下一個敵方技能。",
+        "id": 1034,
+        "augmentSmallIconPath": "./icons/poltergeist_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "全能之魂",
+        "description": "獲得3個隨機龍魂。",
+        "id": 62,
+        "augmentSmallIconPath": "./icons/omnisoul_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "燒起來吧",
+        "description": "獲得感受灼燒召喚師技能。施放感受灼燒後，對所有鄰近敵方英雄施放點燃及虛弱。",
+        "id": 1035,
+        "augmentSmallIconPath": "./icons/feeltheburn_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "瘋狂科學家",
+        "description": "每次復活時，體型變大(增加適性之力及生命)或變小(增加技能加速及跑速)。",
+        "id": 53,
+        "augmentSmallIconPath": "./icons/madscientist_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "普羅王跳跳",
+        "description": "普羅王跳跳取代一個召喚師技能！普羅王跳跳：化身普羅王，進入無人能擋及鬼步狀態。獲得傷害減免與跑速，但進入沉默狀態且無法普攻。此外，你會連續彈跳，對鄰近敵軍造成物理傷害和擊退效果。",
+        "id": 2003,
+        "augmentSmallIconPath": "./icons/poroking_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "任務：阿福英雄",
+        "description": "條件：參與擊殺18次。獎勵：黃金鍋鏟",
+        "id": 154,
+        "augmentSmallIconPath": "./icons/quest_urfschampion_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "巨大盾牌",
+        "description": "獲得護盾時，增加?適性之力，持續3秒(冷卻時間5秒)。",
+        "id": 1314,
+        "augmentSmallIconPath": "./icons/mightyshield_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "基本功夫",
+        "description": "增加技能傷害、治療、護盾，並獲得技能加速，但無法使用大絕。",
+        "id": 4,
+        "augmentSmallIconPath": "./icons/backtobasics_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "大地覺醒",
+        "description": "施放衝刺、閃現或傳送技能後會留下軌跡，軌跡會在0.75秒後引爆。",
+        "id": 27,
+        "augmentSmallIconPath": "./icons/earthwake_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "因信得力",
+        "description": "給予友軍治療或護盾時會祝福對方，持續幾秒；他們對敵軍造成傷害時，你會獲得信仰。累積足夠信仰時，便會發出衝擊波，造成魔法傷害並處決低生命的敵軍。",
+        "id": 2004,
+        "augmentSmallIconPath": "./icons/empoweredbythefaithful_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "純粹 - 法師",
+        "description": "冷卻時間減免一定百分比，並將所有攻速轉換為技能加速。",
+        "id": 2018,
+        "augmentSmallIconPath": "./icons/puristcaster_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "封我為王",
+        "description": "首次攜帶傳說道具乘坐敵方傳送門後，你將加冕為王、升級道具，並獲得一件隨機稜鏡增幅裝置。",
+        "id": 1337,
+        "augmentSmallIconPath": "./icons/kingme_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "升級米凱的祝福",
+        "description": "獲得米凱的祝福。米凱的祝福冷卻時間降至45秒。道具發動時，可淨化限制與硬控場效果，並治療範圍內的友軍。",
+        "id": 1340,
+        "augmentSmallIconPath": "./icons/upgrademikaelsblessing_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "別眨眼",
+        "description": "高出敵軍的跑速越多，造成的傷害越多。",
+        "id": 26,
+        "augmentSmallIconPath": "./icons/dontblink_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "我是小貓咪媽咪在哪裡",
+        "description": "站在友軍旁邊會將其標記為媽媽。向媽媽移動時會增加跑速。接近媽媽時，增加跑速、治療量和護盾量。",
+        "id": 1372,
+        "augmentSmallIconPath": "./icons/babykitty_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": [
+            "Wee Woo Wee Woo"
+        ]
+    },
+    {
+        "nameTRA": "活力補給",
+        "description": "若當前目標非上次的目標，你的充能普攻會完全返還充能。充能普攻造成額外傷害。",
+        "id": 1330,
+        "augmentSmallIconPath": "./icons/mobiuscoil_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "反重力裝置",
+        "description": "生命低於35%時，擊退鄰近敵軍並使其緩速90%。",
+        "id": 69,
+        "augmentSmallIconPath": "./icons/repulsor_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "雷射治療",
+        "description": "施放持續2.5秒的雷射，為友軍回復生命，並對敵軍造成魔法傷害和緩速效果。",
+        "id": 1339,
+        "augmentSmallIconPath": "./icons/laseheal_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "空降水豚",
+        "description": "獲得召喚師技能「空降水豚」。在短暫延遲後，召喚出水豚，造成25%最大生命的真實傷害。",
+        "id": 1414,
+        "augmentSmallIconPath": "./icons/orbitallaser_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "一轉就贏",
+        "description": "旋轉技能增加30技能加速，並額外造成30%傷害。",
+        "id": 214,
+        "augmentSmallIconPath": "./icons/spintowin_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "？？？",
+        "description": "使用敵人失去行蹤信號時，會向該位置發射一枚導彈，對敵軍造成傷害，並回復友軍生命。",
+        "id": 1424,
+        "augmentSmallIconPath": "./icons/missingping_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "幻焰之誓",
+        "description": "增加 15%治療量和護盾量。獲得幻焰之誓召喚師技能。全神貫注傳送到友軍身旁，抵達時獲得?護盾，持續3秒。",
+        "id": 1331,
+        "augmentSmallIconPath": "./icons/empyreampromise_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "士兵術師",
+        "description": "你的召喚物增加40%體型、生命與傷害。",
+        "id": 104,
+        "augmentSmallIconPath": "./icons/minionmancer_small.png",
+        "rarity": "kGold",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "搗蛋鬼",
+        "description": "獲得召喚師技能「搗蛋鬼」。「搗蛋鬼」可施放「光盾」和「鬼步」。",
+        "id": 1347,
+        "augmentSmallIconPath": "./icons/poltergeist_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "隨我同困",
+        "description": "施放大絕後，嘲諷鄰近敵軍並賦予自身傷害減免，持續數秒。",
+        "id": 1413,
+        "augmentSmallIconPath": "./icons/stuckinherewithme_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "小惡魔在低語",
+        "description": "與小惡魔本魔締結契約。他會持續吸取你的生命，但也會獎勵你的暴力行為，使你對英雄造成額外真實傷害，並生成生命殘渣給你。參與擊殺英雄時，使其進入狂熱狀態，短暫提升此增幅裝置的效果。",
+        "id": 2007,
+        "augmentSmallIconPath": "./icons/littledevil_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "巴龍之爪",
+        "description": "增加33%適性之力。大幅強化鄰近友軍士兵。",
+        "id": 1389,
+        "augmentSmallIconPath": "./icons/handofbaron_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "敲爆那顆蛋",
+        "description": "護盾會在失效時爆炸。",
+        "id": 1418,
+        "augmentSmallIconPath": "./icons/crackopenthategg_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "閃光彈",
+        "description": "閃現會觸發爆炸，造成傷害和緩速效果(死亡時重置)。",
+        "id": 187,
+        "augmentSmallIconPath": "./icons/flashbang_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "潘朵拉的寶盒",
+        "description": "將所有的增幅裝置物轉化為隨機稜鏡增幅裝置。",
+        "id": 317,
+        "augmentSmallIconPath": "./icons/pandoras_box_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": [
+            "High Roller"
+        ]
+    },
+    {
+        "nameTRA": "二次閃現",
+        "description": "獲得第二次閃現召喚師技能和70召喚師技能加速。",
+        "id": 1348,
+        "augmentSmallIconPath": "./icons/flash2_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "球鞋收藏家",
+        "description": "立即：獲得1雙隨機升級版靴子。條件：完成任務可換另一雙。獎勵：嘉文一世的靴子",
+        "id": 1343,
+        "augmentSmallIconPath": "./icons/sneakerhead_small.png",
+        "rarity": "kPrismatic",
+        "weight": 10,
+        "label": []
+    },
+    {
+        "nameTRA": "把我耍得團團轉",
+        "description": "英勇勾索取代一個召喚師技能。施放英勇勾索會發射鉤爪嵌入地形，重施技能可以擺蕩繞過地形。擺蕩時會自動普攻最靠近的敵軍。若撞上敵方英雄或重施技能，就會結束擺盪。",
+        "id": 1386,
+        "augmentSmallIconPath": "./icons/youspinmerightround_small.png",
+        "rarity": "kSilver",
+        "weight": 10,
+        "label": []
+    }
+]

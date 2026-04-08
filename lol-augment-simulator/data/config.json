@@ -1,0 +1,12 @@
+{
+  "rounds": 4,
+  "cardsPerRound": 3,
+  "tierProbabilities": [
+    { "kSilver": 1.0,  "kGold": 0.0,  "kPrismatic": 0.0 },
+    { "kSilver": 0.0,  "kGold": 1.0,  "kPrismatic": 0.0 },
+    { "kSilver": 0.0,  "kGold": 0.5,  "kPrismatic": 0.5 },
+    { "kSilver": 0.0,  "kGold": 0.1,  "kPrismatic": 0.9 }
+  ],
+  "languages": ["zh-TW", "en"],
+  "defaultLanguage": "zh-TW"
+}

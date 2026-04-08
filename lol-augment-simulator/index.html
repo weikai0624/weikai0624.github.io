@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOL ARAM 大亂鬥 海克斯增幅模擬器</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── Variables ─────────────────────────────────────────────── */
+    :root {
+      --bg:          #060610;
+      --bg-panel:    #0a0a1e;
+      --bg-card:     #0c0c20;
+      --gold:        #c89b3c;
+      --gold-light:  #f0d060;
+      --gold-dark:   #8a6b28;
+      --silver:      #a0a8b8;
+      --silver-light:#c8d0e0;
+      --prism-a:     #9f5ff0;
+      --prism-b:     #f05fa0;
+      --prism-c:     #5fa0f0;
+      --text:        #e0d8c8;
+      --text-dim:    #6a6a90;
+      --border:      rgba(200,155,60,0.28);
+    }
+
+    /* ── Reset ─────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+    button { font-family: inherit; cursor: pointer; }
+    .hidden { display: none !important; }
+
+    /* ── Loading ───────────────────────────────────────────────── */
+    #loading-screen {
+      position: fixed; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--bg); z-index: 9999; flex-direction: column; gap: 16px;
+    }
+    .loading-spinner {
+      width: 40px; height: 40px;
+      border: 3px solid rgba(200,155,60,0.15);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin 0.9s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .loading-text { color: var(--text-dim); font-size: 0.85rem; letter-spacing: 3px; }
+
+    /* ── Language switcher ─────────────────────────────────────── */
+    #lang-bar {
+      position: fixed; top: 12px; right: 16px; z-index: 500;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .lang-label { font-size: 0.7rem; color: var(--text-dim); }
+    #lang-select {
+      background: rgba(10,10,30,0.9);
+      border: 1px solid var(--border);
+      color: var(--gold);
+      font-size: 0.78rem;
+      padding: 4px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      outline: none;
+    }
+    #lang-select option { background: #0c0c20; }
+
+    /* ══════════════════════════════════════════════════════════════
+       START SCREEN
+    ══════════════════════════════════════════════════════════════ */
+    #start-screen {
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background:
+        radial-gradient(ellipse at 50% 20%, rgba(159,95,240,0.15) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 80%, rgba(200,155,60,0.10) 0%, transparent 50%),
+        var(--bg);
+      position: relative; overflow: hidden;
+    }
+    #start-screen::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        repeating-linear-gradient(30deg, transparent, transparent 44px, rgba(200,155,60,0.03) 44px, rgba(200,155,60,0.03) 45px),
+        repeating-linear-gradient(150deg, transparent, transparent 44px, rgba(200,155,60,0.03) 44px, rgba(200,155,60,0.03) 45px);
+      pointer-events: none;
+    }
+    .start-content { position: relative; text-align: center; padding: 40px 20px; max-width: 560px; width: 100%; }
+    .start-hex {
+      font-size: 3.2rem; display: block; margin-bottom: 14px;
+      filter: drop-shadow(0 0 22px rgba(159,95,240,0.9));
+      animation: hexFloat 3s ease-in-out infinite;
+    }
+    @keyframes hexFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+    .start-title {
+      font-size: 1.9rem; font-weight: 700; color: var(--gold-light);
+      text-shadow: 0 0 28px rgba(240,208,96,0.5); letter-spacing: 3px; margin-bottom: 5px;
+    }
+    .start-subtitle { font-size: 0.88rem; color: var(--silver); letter-spacing: 6px; margin-bottom: 34px; }
+    .start-rules {
+      background: rgba(8,8,24,0.88); border: 1px solid var(--border);
+      border-radius: 10px; padding: 18px 22px; text-align: left; margin-bottom: 32px;
+    }
+    .start-rules-title { font-size: 0.72rem; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+    .start-rules ul { list-style: none; }
+    .start-rules li {
+      font-size: 0.84rem; color: var(--text-dim); padding: 4px 0 4px 18px;
+      position: relative; line-height: 1.65;
+    }
+    .start-rules li::before { content: '◆'; position: absolute; left: 0; color: var(--gold-dark); font-size: 0.58rem; top: 9px; }
+    .start-rules li b { color: var(--text); }
+    .round-tier-row { display: flex; align-items: center; gap: 6px; margin-top: 12px; flex-wrap: wrap; }
+    .tier-pill { padding: 3px 10px; border-radius: 20px; font-size: 0.72rem; font-weight: 600; }
+    .tier-pill.kSilver    { background: rgba(160,168,184,0.12); color: var(--silver-light); border: 1px solid rgba(160,168,184,0.35); }
+    .tier-pill.kGold      { background: rgba(200,155,60,0.12);  color: var(--gold-light);   border: 1px solid rgba(200,155,60,0.35); }
+    .tier-pill.kPrismatic { background: rgba(159,95,240,0.12);  color: #d0a8ff;             border: 1px solid rgba(159,95,240,0.35); }
+    .btn-start {
+      background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 40%, var(--gold-light) 60%, var(--gold) 100%);
+      color: #05050f; border: none;
+      padding: 15px 60px; font-size: 1.1rem; font-weight: 700;
+      border-radius: 4px; letter-spacing: 6px;
+      box-shadow: 0 0 28px rgba(200,155,60,0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+      transition: all 0.3s;
+    }
+    .btn-start:hover { transform: translateY(-3px); box-shadow: 0 8px 36px rgba(200,155,60,0.65); }
+
+    /* ══════════════════════════════════════════════════════════════
+       GAME SCREEN
+    ══════════════════════════════════════════════════════════════ */
+    #game-screen { max-width: 1100px; margin: 0 auto; padding: 16px 16px 60px; }
+
+    /* Header */
+    .game-header { text-align: center; padding: 20px 0 24px; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+    .game-header-label { font-size: 0.68rem; color: var(--text-dim); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 16px; }
+
+    /* Round progress dots */
+    .round-progress { display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+    .round-dot {
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 2px solid #222240;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.78rem; font-weight: 700; color: #222240;
+      transition: all 0.4s; background: var(--bg); position: relative; z-index: 1;
+    }
+    .round-dot.done    { background: var(--gold-dark); border-color: var(--gold); color: #05050f; }
+    .round-dot.current { border-color: var(--gold); color: var(--gold); background: rgba(200,155,60,0.07); animation: dotPulse 1.8s ease-in-out infinite; }
+    .round-connector   { width: 44px; height: 2px; background: #1a1a35; transition: background 0.4s; }
+    .round-connector.done { background: var(--gold-dark); }
+    @keyframes dotPulse {
+      0%,100% { box-shadow: 0 0 0 4px rgba(200,155,60,0.08), 0 0 14px rgba(200,155,60,0.35); }
+      50%      { box-shadow: 0 0 0 6px rgba(200,155,60,0.18), 0 0 26px rgba(200,155,60,0.65); }
+    }
+    .round-info-row { display: flex; align-items: center; justify-content: center; gap: 10px; }
+    .round-info-text { font-size: 0.95rem; color: var(--gold); }
+    .tier-badge { display: inline-block; padding: 3px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; letter-spacing: 1px; }
+    .tier-badge.kSilver    { background: rgba(160,168,184,0.10); color: var(--silver-light); border: 1px solid rgba(160,168,184,0.35); }
+    .tier-badge.kGold      { background: rgba(200,155,60,0.10);  color: var(--gold-light);   border: 1px solid rgba(200,155,60,0.35); }
+    .tier-badge.kPrismatic { background: rgba(159,95,240,0.10);  color: #d0a8ff;             border: 1px solid rgba(159,95,240,0.4); }
+
+    /* ── History ───────────────────────────────────────────────── */
+    .history-section {
+      background: rgba(8,8,20,0.9); border: 1px solid var(--border);
+      border-radius: 12px; padding: 14px 18px; margin-bottom: 22px;
+    }
+    .history-section-label { font-size: 0.68rem; color: var(--text-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+    .history-badges { display: flex; flex-wrap: wrap; gap: 7px; min-height: 32px; align-items: center; margin-bottom: 2px; }
+    .history-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 5px 11px; border-radius: 20px; font-size: 0.79rem; font-weight: 500;
+      cursor: default; transition: filter 0.15s;
+      position: relative;
+    }
+    .history-badge:hover { filter: brightness(1.25); }
+    .history-badge.kSilver    { background: rgba(160,168,184,0.09); border: 1px solid rgba(160,168,184,0.32); color: var(--silver-light); }
+    .history-badge.kGold      { background: rgba(200,155,60,0.09);  border: 1px solid rgba(200,155,60,0.32);  color: var(--gold-light); }
+    .history-badge.kPrismatic { background: rgba(159,95,240,0.09);  border: 1px solid rgba(159,95,240,0.32);  color: #d0a8ff; }
+    .badge-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    .history-badge.kSilver    .badge-dot { background: var(--silver); }
+    .history-badge.kGold      .badge-dot { background: var(--gold); }
+    .history-badge.kPrismatic .badge-dot { background: var(--prism-a); }
+    .badge-family-tag {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 1px 7px; border-radius: 20px; font-size: 0.64rem;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10);
+      cursor: pointer; transition: border-color 0.15s, background 0.15s; margin-left: 3px;
+    }
+    .badge-family-tag:hover { background: rgba(255,255,255,0.09); }
+
+    /* ── Combo display (history section bottom) ────────────────── */
+    .combo-area { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+    .combo-block {
+      border-radius: 8px; padding: 10px 14px;
+      border-left: 3px solid transparent;
+    }
+    .combo-block.c2 { background: rgba(200,155,60,0.06);  border-left-color: var(--gold); }
+    .combo-block.c3 { background: rgba(159,95,240,0.08);  border-left-color: var(--prism-a); }
+    .combo-block.c4 { background: rgba(240,95,160,0.09);  border-left-color: var(--prism-b); }
+    .combo-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .combo-family-name { font-size: 0.88rem; font-weight: 700; }
+    .combo-count-badge {
+      font-size: 0.68rem; font-weight: 700; padding: 2px 8px;
+      border-radius: 20px; background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1); color: var(--text-dim);
+    }
+    .combo-pips { display: flex; gap: 3px; }
+    .combo-pip { width: 7px; height: 7px; border-radius: 50%; border: 1px solid; opacity: 0.35; }
+    .combo-pip.active { opacity: 1; }
+    .combo-levels { display: flex; flex-direction: column; gap: 3px; }
+    .combo-level-row { display: flex; align-items: baseline; gap: 7px; font-size: 0.79rem; }
+    .combo-level-row.achieved .combo-level-label { color: #6adb9a; }
+    .combo-level-row.achieved .combo-level-check { color: #6adb9a; }
+    .combo-level-row.next     .combo-level-label { color: var(--text-dim); opacity: 0.6; }
+    .combo-level-row.next     .combo-level-bonus { color: var(--text-dim); opacity: 0.5; }
+    .combo-level-label { font-weight: 600; white-space: nowrap; font-size: 0.73rem; }
+    .combo-level-check { font-size: 0.78rem; width: 14px; flex-shrink: 0; }
+    .combo-level-bonus { color: var(--text-dim); line-height: 1.5; }
+
+    /* ── Augment Cards ─────────────────────────────────────────── */
+    .selection-header { text-align: center; margin-bottom: 18px; }
+    .selection-title  { font-size: 0.98rem; color: var(--text-dim); }
+    .cards-container  { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
+
+    .card-wrap   { width: 296px; display: flex; flex-direction: column; }
+    .card-border { border-radius: 14px; padding: 2px; flex: 1; display: flex; flex-direction: column; }
+    .card-border.kSilver    { background: var(--silver); box-shadow: 0 0 18px rgba(160,168,184,0.28); }
+    .card-border.kGold      { background: var(--gold);   box-shadow: 0 0 24px rgba(200,155,60,0.42); }
+    .card-border.kPrismatic {
+      background: linear-gradient(135deg, #9f5ff0, #f05fa0, #5fa0f0, #9f5ff0);
+      background-size: 300% 300%;
+      animation: prismShift 3s ease infinite;
+      box-shadow: 0 0 30px rgba(159,95,240,0.48);
+    }
+    @keyframes prismShift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .augment-card {
+      background: var(--bg-card); border-radius: 12px; padding: 18px;
+      cursor: pointer; transition: transform 0.2s, background 0.2s;
+      flex: 1; display: flex; flex-direction: column; min-height: 210px;
+    }
+    .augment-card:hover { transform: translateY(-6px); background: #11112a; }
+    .card-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 10px; }
+    .card-tier-badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.66rem; font-weight: 700; letter-spacing: 1px; }
+    .card-tier-badge.kSilver    { background: rgba(160,168,184,0.10); color: var(--silver-light); border: 1px solid rgba(160,168,184,0.38); }
+    .card-tier-badge.kGold      { background: rgba(200,155,60,0.10);  color: var(--gold-light);   border: 1px solid rgba(200,155,60,0.38); }
+    .card-tier-badge.kPrismatic { background: rgba(159,95,240,0.10);  color: #d8b4ff;             border: 1px solid rgba(159,95,240,0.5); }
+    .card-special-mark { font-size: 1.0rem; margin-top: -1px; }
+    .card-name    { font-size: 1.0rem; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+    .card-name-en { font-size: 0.7rem; color: var(--text-dim); margin-bottom: 8px; }
+    .card-family-tag {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 2px 8px; border-radius: 4px; font-size: 0.68rem;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      color: var(--text-dim); margin-bottom: 9px; cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .card-family-tag:hover { background: rgba(255,255,255,0.09); }
+    .family-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    .card-desc { font-size: 0.8rem; color: #8888a8; line-height: 1.65; flex: 1; }
+
+    .btn-reroll {
+      width: 100%; margin-top: 9px; padding: 8px;
+      border-radius: 6px; font-size: 0.8rem; font-weight: 500;
+      transition: all 0.2s; letter-spacing: 0.5px;
+    }
+    .card-wrap.kSilver    .btn-reroll { background: rgba(160,168,184,0.07); border: 1px solid rgba(160,168,184,0.22); color: var(--silver); }
+    .card-wrap.kSilver    .btn-reroll:hover:not(:disabled) { background: rgba(160,168,184,0.16); border-color: var(--silver); }
+    .card-wrap.kGold      .btn-reroll { background: rgba(200,155,60,0.07);  border: 1px solid rgba(200,155,60,0.22);  color: var(--gold); }
+    .card-wrap.kGold      .btn-reroll:hover:not(:disabled) { background: rgba(200,155,60,0.16); border-color: var(--gold); }
+    .card-wrap.kPrismatic .btn-reroll { background: rgba(159,95,240,0.07);  border: 1px solid rgba(159,95,240,0.22);  color: #c89bff; }
+    .card-wrap.kPrismatic .btn-reroll:hover:not(:disabled) { background: rgba(159,95,240,0.16); border-color: var(--prism-a); }
+    .btn-reroll:disabled { opacity: 0.3; cursor: not-allowed; }
+
+    /* ── Tooltip ───────────────────────────────────────────────── */
+    #aug-tooltip {
+      position: fixed; z-index: 3000; pointer-events: none;
+      background: #0c0c22; border: 1px solid rgba(200,155,60,0.38);
+      border-radius: 10px; padding: 13px 15px; max-width: 280px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.7);
+      font-size: 0.81rem; line-height: 1.5; display: none;
+    }
+    #aug-tooltip.visible { display: block; }
+    .tt-tier { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 5px; }
+    .tt-tier.kSilver    { color: var(--silver-light); }
+    .tt-tier.kGold      { color: var(--gold-light); }
+    .tt-tier.kPrismatic { color: #d0a8ff; }
+    .tt-name    { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .tt-desc    { color: #8888a8; margin-bottom: 0; }
+    .tt-divider { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin: 9px 0; }
+    .tt-combo-label { font-size: 0.68rem; color: var(--text-dim); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px; }
+    .tt-combo-family { font-weight: 700; margin-bottom: 3px; }
+    .tt-combo-bonus  { color: var(--text-dim); font-size: 0.78rem; }
+
+    /* ── Modal Notification ────────────────────────────────────── */
+    .overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.72);
+      z-index: 900; backdrop-filter: blur(3px);
+    }
+    .notif {
+      position: fixed; top: 50%; left: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      background: #0c0c22; border: 2px solid var(--gold);
+      border-radius: 14px; padding: 28px 36px; text-align: center;
+      z-index: 1000; max-width: 420px; width: 90%;
+      box-shadow: 0 0 56px rgba(200,155,60,0.38);
+      animation: notifIn 0.22s ease;
+    }
+    @keyframes notifIn { from { transform:translate(-50%,-50%) scale(0.82); opacity:0; } to { transform:translate(-50%,-50%) scale(1); opacity:1; } }
+    .notif h3 { font-size: 1.2rem; color: var(--gold-light); margin-bottom: 7px; }
+    .notif p  { color: var(--text-dim); font-size: 0.86rem; line-height: 1.6; margin-bottom: 16px; }
+    .notif-aug-list { display: flex; flex-direction: column; gap: 7px; margin-bottom: 20px; }
+    .notif-aug-item {
+      padding: 8px 14px; border-radius: 7px; font-size: 0.83rem;
+      text-align: left; display: flex; align-items: center; gap: 9px;
+    }
+    .notif-aug-item.kSilver    { background: rgba(160,168,184,0.09); border: 1px solid rgba(160,168,184,0.28); }
+    .notif-aug-item.kGold      { background: rgba(200,155,60,0.09);  border: 1px solid rgba(200,155,60,0.28); }
+    .notif-aug-item.kPrismatic { background: rgba(159,95,240,0.09);  border: 1px solid rgba(159,95,240,0.28); }
+    .notif-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .notif-aug-item.kSilver    .notif-dot { background: var(--silver); }
+    .notif-aug-item.kGold      .notif-dot { background: var(--gold); }
+    .notif-aug-item.kPrismatic .notif-dot { background: var(--prism-a); }
+    .btn-notif-ok {
+      background: var(--gold); color: #05050f; border: none;
+      padding: 9px 30px; font-size: 0.92rem; font-weight: 700;
+      border-radius: 4px; letter-spacing: 2px; transition: all 0.2s;
+    }
+    .btn-notif-ok:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    /* ══════════════════════════════════════════════════════════════
+       END SCREEN
+    ══════════════════════════════════════════════════════════════ */
+    #end-screen { max-width: 1100px; margin: 0 auto; padding: 50px 20px 70px; }
+    .end-header { text-align: center; margin-bottom: 44px; }
+    .end-title { font-size: 1.75rem; font-weight: 700; color: var(--gold-light); text-shadow: 0 0 26px rgba(240,208,96,0.5); letter-spacing: 2px; margin-bottom: 7px; }
+    .end-sub   { color: var(--text-dim); font-size: 0.88rem; }
+    .section-title { font-size: 0.7rem; color: var(--gold); letter-spacing: 4px; text-transform: uppercase; border-bottom: 1px solid var(--border); padding-bottom: 9px; margin-bottom: 18px; }
+    .end-cards { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 44px; }
+    .end-card {
+      width: 200px; border-radius: 12px; padding: 14px;
+      background: var(--bg-card);
+    }
+    .end-card.kSilver    { border: 2px solid var(--silver); box-shadow: 0 0 14px rgba(160,168,184,0.15); }
+    .end-card.kGold      { border: 2px solid var(--gold);   box-shadow: 0 0 20px rgba(200,155,60,0.22); }
+    .end-card.kPrismatic { border: 2px solid var(--prism-a);box-shadow: 0 0 24px rgba(159,95,240,0.22); }
+    .end-card-tier { font-size: 0.65rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+    .end-card-tier.kSilver    { color: var(--silver); }
+    .end-card-tier.kGold      { color: var(--gold); }
+    .end-card-tier.kPrismatic { color: #c89bff; }
+    .end-card-name    { font-size: 0.93rem; font-weight: 700; margin-bottom: 2px; }
+    .end-card-name-en { font-size: 0.68rem; color: var(--text-dim); margin-bottom: 7px; }
+    .end-card-family  { font-size: 0.69rem; margin-bottom: 7px; }
+    .end-card-desc    { font-size: 0.76rem; color: #8888a8; line-height: 1.55; }
+    .end-combo-card {
+      padding: 16px 18px; border-radius: 10px; margin-bottom: 12px;
+    }
+    .end-combo-card.c2 { background: rgba(200,155,60,0.06); border-left: 4px solid var(--gold); }
+    .end-combo-card.c3 { background: rgba(159,95,240,0.08); border-left: 4px solid var(--prism-a); }
+    .end-combo-card.c4 { background: rgba(240,95,160,0.09); border-left: 4px solid var(--prism-b); }
+    .end-combo-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+    .end-combo-name { font-size: 0.98rem; font-weight: 700; }
+    .end-combo-augs { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+    .end-combo-levels { display: flex; flex-direction: column; gap: 4px; }
+    .end-combo-level-row { display: flex; align-items: baseline; gap: 7px; font-size: 0.81rem; }
+    .end-combo-level-row.achieved .ecl-label { color: #6adb9a; }
+    .end-combo-level-row.achieved .ecl-check { color: #6adb9a; }
+    .ecl-check  { font-size: 0.78rem; width: 14px; flex-shrink: 0; }
+    .ecl-label  { font-weight: 600; font-size: 0.72rem; white-space: nowrap; }
+    .ecl-bonus  { color: var(--text-dim); line-height: 1.5; }
+    .end-no-combos { color: var(--text-dim); font-size: 0.85rem; text-align: center; padding: 20px 0; }
+    .btn-restart {
+      display: block; margin: 44px auto 0;
+      background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 40%, var(--gold-light) 60%, var(--gold) 100%);
+      color: #05050f; border: none;
+      padding: 13px 52px; font-size: 1rem; font-weight: 700;
+      border-radius: 4px; letter-spacing: 4px;
+      box-shadow: 0 0 26px rgba(200,155,60,0.32);
+      transition: all 0.3s;
+    }
+    .btn-restart:hover { transform: translateY(-2px); box-shadow: 0 6px 34px rgba(200,155,60,0.6); }
+
+    /* ── Card icon ─────────────────────────────────────────────── */
+    .card-icon-row { display: flex; align-items: center; gap: 9px; margin-bottom: 7px; }
+    .card-icon { width: 36px; height: 36px; border-radius: 6px; object-fit: cover; flex-shrink: 0; background: rgba(255,255,255,0.04); }
+
+    /* ── Badge icon ─────────────────────────────────────────────── */
+    .badge-icon { width: 20px; height: 20px; border-radius: 3px; object-fit: cover; flex-shrink: 0; }
+
+    /* ── History two-column ─────────────────────────────────────── */
+    .history-main-row { display: flex; gap: 18px; align-items: flex-start; }
+    .history-badges-col { flex: 1; min-width: 0; }
+    .history-combo-col { width: 260px; flex-shrink: 0; }
+    .combo-col-label { font-size: 0.65rem; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; }
+
+    /* ── Responsive ────────────────────────────────────────────── */
+    @media (max-width: 720px) {
+      .card-wrap { width: 92%; max-width: 320px; }
+      .start-title { font-size: 1.45rem; }
+      .round-connector { width: 26px; }
+      .end-card { width: 155px; }
+      .history-main-row { flex-direction: column; }
+      .history-combo-col { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Loading -->
+<div id="loading-screen">
+  <div class="loading-spinner"></div>
+  <div class="loading-text" id="loading-text">LOADING…</div>
+</div>
+
+<!-- Language bar -->
+<div id="lang-bar" class="hidden">
+  <span class="lang-label" id="lang-label-text">語言</span>
+  <select id="lang-select" onchange="switchLanguage(this.value)"></select>
+</div>
+
+<!-- ══ START SCREEN ══ -->
+<div id="start-screen" class="hidden">
+  <div class="start-content">
+    <span class="start-hex">⬡</span>
+    <div class="start-title" id="ss-title"></div>
+    <div class="start-subtitle" id="ss-subtitle"></div>
+    <div class="start-rules">
+      <div class="start-rules-title" id="ss-rules-title"></div>
+      <ul id="ss-rules-list"></ul>
+      <div class="round-tier-row" id="ss-tier-row"></div>
+    </div>
+    <button class="btn-start" id="ss-btn-start" onclick="startGame()"></button>
+  </div>
+</div>
+
+<!-- ══ GAME SCREEN ══ -->
+<div id="game-screen" class="hidden">
+  <div class="game-header">
+    <div class="game-header-label" id="gs-header-label"></div>
+    <div class="round-progress" id="gs-round-progress"></div>
+    <div class="round-info-row">
+      <span class="round-info-text" id="gs-round-info"></span>
+      <span id="gs-tier-badge"></span>
+    </div>
+  </div>
+
+  <!-- History + combos -->
+  <div class="history-section">
+    <div class="history-section-label" id="gs-history-label"></div>
+    <div class="history-main-row">
+      <div class="history-badges-col">
+        <div class="history-badges" id="gs-history-badges"></div>
+      </div>
+      <div class="history-combo-col">
+        <div class="combo-col-label" id="gs-combo-col-label"></div>
+        <div class="combo-area" id="gs-combo-area"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card selection -->
+  <div class="selection-header">
+    <div class="selection-title" id="gs-selection-title"></div>
+  </div>
+  <div class="cards-container" id="gs-cards"></div>
+</div>
+
+<!-- ══ END SCREEN ══ -->
+<div id="end-screen" class="hidden">
+  <div class="end-header">
+    <div class="end-title" id="es-title"></div>
+    <div class="end-sub"   id="es-sub"></div>
+  </div>
+  <div class="section-title" id="es-augs-title"></div>
+  <div class="end-cards" id="es-cards"></div>
+  <div id="es-combos-section">
+    <div class="section-title" id="es-combos-title"></div>
+    <div id="es-combos"></div>
+  </div>
+  <button class="btn-restart" id="es-btn-restart" onclick="restartGame()"></button>
+</div>
+
+<!-- Modal notification -->
+<div class="overlay hidden" id="modal-overlay"></div>
+<div class="notif hidden" id="modal-notif"></div>
+
+<!-- Tooltip -->
+<div id="aug-tooltip"></div>
+
+<!-- Scripts -->
+<script src="js/LanguageManager.js"></script>
+<script src="js/AugmentEngine.js"></script>
+<script>
+// ══════════════════════════════════════════════════════════════════
+// App globals
+// ══════════════════════════════════════════════════════════════════
+const lang   = new LanguageManager();
+let engine   = null;
+let config   = null;
+let families = null;
+let pendingModalCb = null;
+
+// ══════════════════════════════════════════════════════════════════
+// Bootstrap — load all JSON data then show start screen
+// ══════════════════════════════════════════════════════════════════
+(async function init() {
+  try {
+    const [cfgData, augData, famData] = await Promise.all([
+      fetchJSON('data/config.json'),
+      fetchJSON('data/augments.json'),
+      fetchJSON('data/families.json'),
+    ]);
+    config = cfgData;
+
+    // Build family objects for the engine from families.json
+    const familyArr = famData.families.map(f => ({
+      id: f.id,
+      color: f.color,
+      memberIds: augData.augments.filter(a => a.family.includes(f.id)).map(a => a.id),
+      bonuses: {
+        2: { zh: f.bonus2ZH, en: f.bonus2EN },
+        3: { zh: f.bonus3ZH, en: f.bonus3EN },
+        4: { zh: f.bonus4ZH, en: f.bonus4EN }
+      }
+    }));
+
+    // Build augment objects — family is an array for multi-family support
+    const augmentArr = augData.augments.map(a => ({
+      id: a.id,
+      tier: a.tier,
+      family: a.family,   // kept as array: [] | ["archmage"] | ["archmage","dive_bomb"]
+      iconUrl: a.iconUrl,
+      ...(a.isSpecial ? { isSpecial: true, specialType: a.specialType } : {})
+    }));
+
+    const augmentData = { augments: augmentArr };
+    const familyData  = { families: familyArr };
+
+    lang.setAvailableLanguages(config.languages ?? ['zh-TW', 'en']);
+    await lang.loadLanguage(config.defaultLanguage ?? 'zh-TW');
+
+    engine = new AugmentEngine(augmentData, familyData, config);
+
+    buildLangSwitcher();
+    renderStartScreen();
+    document.getElementById('loading-screen').classList.add('hidden');
+    document.getElementById('lang-bar').classList.remove('hidden');
+    document.getElementById('start-screen').classList.remove('hidden');
+  } catch (err) {
+    document.getElementById('loading-text').textContent = 'Error loading data. Please use a local server (e.g. npx serve .)';
+    console.error(err);
+  }
+})();
+
+async function fetchJSON(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(`Failed to fetch ${path}: ${res.status}`);
+  return res.json();
+}
+
+function augName(aug) {
+  return lang.t('augments.' + aug.id + '.name') || aug.id;
+}
+
+function augDesc(aug) {
+  return lang.t('augments.' + aug.id + '.description') || '';
+}
+
+function augFamName(famId) {
+  return lang.t('families.' + famId + '.name') || famId;
+}
+
+function augFamBonus(famId, n) {
+  return lang.t('families.' + famId + '.bonus' + n) || '';
+}
+
+// ══════════════════════════════════════════════════════════════════
+// Language switching
+// ══════════════════════════════════════════════════════════════════
+function buildLangSwitcher() {
+  const sel = document.getElementById('lang-select');
+  sel.innerHTML = lang.getAvailableLanguages().map(code =>
+    `<option value="${code}" ${code === lang.getCurrentLanguage() ? 'selected' : ''}>${code}</option>`
+  ).join('');
+}
+
+async function switchLanguage(code) {
+  await lang.loadLanguage(code);
+  // Re-render whatever screen is visible
+  const gs = document.getElementById('game-screen');
+  const es = document.getElementById('end-screen');
+  const ss = document.getElementById('start-screen');
+  if (!ss.classList.contains('hidden')) renderStartScreen();
+  if (!gs.classList.contains('hidden')) renderGame();
+  if (!es.classList.contains('hidden')) renderEnd();
+  document.getElementById('lang-label-text').textContent = lang.t('ui.lang_label');
+}
+
+// ══════════════════════════════════════════════════════════════════
+// START SCREEN
+// ══════════════════════════════════════════════════════════════════
+function renderStartScreen() {
+  document.getElementById('ss-title').textContent    = lang.t('ui.title');
+  document.getElementById('ss-subtitle').textContent = lang.t('ui.subtitle');
+  document.getElementById('ss-rules-title').textContent = lang.t('ui.rules_title');
+  document.getElementById('ss-btn-start').textContent   = lang.t('ui.start');
+  document.getElementById('lang-label-text').textContent = lang.t('ui.lang_label');
+
+  const rulesList = document.getElementById('ss-rules-list');
+  rulesList.innerHTML = lang.rules().map(r => `<li>${r}</li>`).join('');
+
+  const tierRow = document.getElementById('ss-tier-row');
+  tierRow.innerHTML = '';
+}
+
+function startGame() {
+  engine.reset();
+  document.getElementById('start-screen').classList.add('hidden');
+  document.getElementById('end-screen').classList.add('hidden');
+  document.getElementById('game-screen').classList.remove('hidden');
+  const round = engine.dealRound();
+  renderGame();
+}
+
+// ══════════════════════════════════════════════════════════════════
+// GAME SCREEN
+// ══════════════════════════════════════════════════════════════════
+function renderGame() {
+  const r     = engine.getCurrentRound();
+  const total = engine.getTotalRounds();
+  const tier  = engine.getCurrentTier();
+
+  // Header label
+  document.getElementById('gs-header-label').textContent = lang.t('ui.header_label');
+
+  // Round progress dots
+  let dotHtml = '';
+  for (let i = 0; i < total; i++) {
+    if (i > 0) dotHtml += `<div class="round-connector${i <= r ? ' done' : ''}"></div>`;
+    const cls = i < r ? 'done' : i === r ? 'current' : '';
+    dotHtml += `<div class="round-dot ${cls}">${i + 1}</div>`;
+  }
+  document.getElementById('gs-round-progress').innerHTML = dotHtml;
+
+  document.getElementById('gs-round-info').textContent =
+    lang.t('ui.round_label', { round: r + 1, remaining: total - r });
+  document.getElementById('gs-tier-badge').innerHTML =
+    `<span class="tier-badge ${tier}">${lang.tier(tier)}</span>`;
+  document.getElementById('gs-selection-title').textContent =
+    lang.t('ui.selection_title', { tier: lang.tier(tier) });
+
+  document.getElementById('gs-history-label').textContent = lang.t('ui.history_label');
+
+  renderHistory();
+  renderCards();
+}
+
+function renderHistory() {
+  const ids    = engine.getSelectedIds();
+  const badges = document.getElementById('gs-history-badges');
+  const combos = document.getElementById('gs-combo-area');
+  const colLabel = document.getElementById('gs-combo-col-label');
+
+  if (!ids.length) {
+    badges.innerHTML = `<span style="color:var(--text-dim);font-size:0.81rem;font-style:italic;">${lang.t('ui.history_empty')}</span>`;
+    combos.innerHTML = '';
+    if (colLabel) colLabel.textContent = '';
+    return;
+  }
+
+  badges.innerHTML = ids.map(id => {
+    const aug = engine.getAugmentById(id);
+    const iconHtml = aug.iconUrl
+      ? `<img class="badge-icon" src="${aug.iconUrl}" alt="" loading="lazy">`
+      : '';
+    const families = Array.isArray(aug.family) ? aug.family : (aug.family ? [aug.family] : []);
+    const famTags = families.map(famId => {
+      const f = engine.getFamilyById(famId);
+      if (!f) return '';
+      return `<span class="badge-family-tag" data-family-id="${famId}"
+        style="border-color:${f.color}55;color:${f.color}"
+        onmouseenter="showFamilyTooltip(this)"
+        onmouseleave="showTooltip(this.closest('.history-badge'))">
+        <span style="width:5px;height:5px;border-radius:50%;background:${f.color};display:inline-block;flex-shrink:0;"></span>
+        ${augFamName(famId)}</span>`;
+    }).join('');
+    return `
+      <div class="history-badge ${aug.tier}" data-aug-id="${id}"
+           onmouseenter="showTooltip(this)" onmouseleave="hideTooltip()">
+        ${iconHtml}
+        <div class="badge-dot"></div>${augName(aug)}${famTags}
+      </div>`;
+  }).join('');
+
+  if (colLabel) colLabel.textContent = lang.t('ui.combos_label');
+  renderCombos(combos);
+}
+
+function renderCombos(container) {
+  const active = engine.getActiveCombos();
+  if (!active.length) { container.innerHTML = ''; return; }
+
+  container.innerHTML = active.map(({ familyId, count, memberAugIds }) => {
+    const fam      = engine.getFamilyById(familyId);
+    const maxLevel = Math.min(count, 4);
+    const cls      = `c${maxLevel}`;
+
+    const pips = [2,3,4].map(n =>
+      `<div class="combo-pip${n <= count ? ' active' : ''}" style="background:${fam.color};border-color:${fam.color}"></div>`
+    ).join('');
+
+    const rows = [2,3,4].map(n => {
+      const achieved = n <= count;
+      const isNext   = n === count + 1;
+      if (!achieved && !isNext) return '';
+      const bonus = augFamBonus(familyId, n);
+      if (!bonus) return '';
+      return `
+        <div class="combo-level-row ${achieved ? 'achieved' : 'next'}">
+          <span class="combo-level-check">${achieved ? '✓' : '▷'}</span>
+          <span class="combo-level-label" style="color:${achieved ? '#6adb9a' : 'var(--text-dim)'}">
+            ${lang.t('ui.combo_pieces', { count: n })}
+          </span>
+          <span class="combo-level-bonus">${bonus}</span>
+        </div>`;
+    }).join('');
+
+    return `
+      <div class="combo-block ${cls}" data-family-id="${familyId}" data-count="${count}"
+           onmouseenter="showComboTooltip(this)" onmouseleave="hideTooltip()">
+        <div class="combo-header">
+          <span class="combo-family-name" style="color:${fam.color}">${augFamName(familyId)}</span>
+          <span class="combo-count-badge">×${count}</span>
+          <div class="combo-pips">${pips}</div>
+        </div>
+        <div class="combo-levels">${rows}</div>
+      </div>`;
+  }).join('');
+}
+
+function renderCards() {
+  const options = engine.getCurrentOptions();
+  document.getElementById('gs-cards').innerHTML = options.map((card, i) => {
+    const aug = engine.getAugmentById(card.id);
+    const famId0 = aug.family?.[0] ?? null;
+    const fam = famId0 ? engine.getFamilyById(famId0) : null;
+    const iconHtml = aug.iconUrl
+      ? `<img class="card-icon" src="${aug.iconUrl}" alt="" loading="lazy">`
+      : `<div class="card-icon" style="background:rgba(255,255,255,0.04)"></div>`;
+    return `
+      <div class="card-wrap ${aug.tier}">
+        <div class="card-border ${aug.tier}">
+          <div class="augment-card" onclick="selectCard(${i})">
+            <div class="card-top">
+              <span class="card-tier-badge ${aug.tier}">${lang.tier(aug.tier)}</span>
+              ${aug.isSpecial ? `<span class="card-special-mark">✨</span>` : ''}
+            </div>
+            <div class="card-icon-row">
+              ${iconHtml}
+              <div class="card-name">${augName(aug)}</div>
+            </div>
+            ${fam ? `<div class="card-family-tag" data-family-id="${famId0}"
+              onmouseenter="showFamilyTooltip(this)" onmouseleave="hideTooltip()"
+              onclick="event.stopPropagation()">
+              <div class="family-dot" style="background:${fam.color}"></div>${augFamName(famId0)}</div>` : ''}
+            <div class="card-desc">${augDesc(aug)}</div>
+          </div>
+        </div>
+        <button class="btn-reroll" onclick="rerollCard(${i})" ${card.rerolled ? 'disabled' : ''}>
+          ${card.rerolled ? lang.t('ui.btn_rerolled') : lang.t('ui.btn_reroll')}
+        </button>
+      </div>`;
+  }).join('');
+}
+
+// ── Actions ─────────────────────────────────────────────────────
+function selectCard(idx) {
+  const result = engine.selectCard(idx);
+  if (!result) return;
+
+  if (result.type === 'special') {
+    handleSpecialResult(result);
+  } else {
+    afterSelection();
+  }
+}
+
+function rerollCard(idx) {
+  if (!engine.canReroll(idx)) return;
+  const newId = engine.reroll(idx);
+  if (!newId) { alert(lang.t('ui.pool_empty')); return; }
+  renderCards();
+}
+
+function handleSpecialResult(result) {
+  let title, msg;
+  if (result.specialType === 'give_gold') {
+    title = lang.t('ui.notif_give_gold_title');
+    msg   = lang.t('ui.notif_give_gold_msg');
+  } else if (result.specialType === 'give_two') {
+    title = lang.t('ui.notif_give_two_title');
+    msg   = lang.t('ui.notif_give_two_msg');
+  } else if (result.specialType === 'give_prismatic') {
+    title = lang.t('ui.notif_give_prismatic_title');
+    msg   = lang.t('ui.notif_give_prismatic_msg');
+  } else {
+    title = lang.t('ui.notif_pandora_title');
+    msg   = lang.t('ui.notif_pandora_msg');
+  }
+
+  const ids = result.gainedIds ?? [];
+  showModal(title, msg, ids, afterSelection);
+}
+
+function afterSelection() {
+  if (engine.isGameOver()) {
+    endGame();
+  } else {
+    engine.dealRound();
+    renderGame();
+  }
+}
+
+// ── Tooltip ─────────────────────────────────────────────────────
+const tooltip = document.getElementById('aug-tooltip');
+
+document.addEventListener('mousemove', e => {
+  if (!tooltip.classList.contains('visible')) return;
+  let x = e.clientX + 16, y = e.clientY - 8;
+  const w = tooltip.offsetWidth || 280;
+  const h = tooltip.offsetHeight || 120;
+  if (x + w > window.innerWidth)  x = e.clientX - w - 10;
+  if (y + h > window.innerHeight) y = e.clientY - h - 8;
+  tooltip.style.left = x + 'px';
+  tooltip.style.top  = y + 'px';
+});
+
+function showTooltip(el) {
+  const augId  = el.dataset.augId;
+  const aug    = engine.getAugmentById(augId);
+  if (!aug) return;
+
+  const comboArr = engine.getFamilyComboForAug(augId) ?? [];
+  const combosForTooltip = Array.isArray(comboArr) ? comboArr : [comboArr];
+
+  let comboHtml = '';
+  for (const combo of combosForTooltip) {
+    const fam = engine.getFamilyById(combo.familyId);
+    if (!fam) continue;
+    const maxLevel = Math.min(combo.count, 4);
+    comboHtml += `
+      <hr class="tt-divider">
+      <div class="tt-combo-label">${augFamName(combo.familyId)} · ${lang.t('ui.tooltip_combo_active', { count: combo.count })}</div>
+      <div class="tt-combo-family" style="color:${fam.color}">${augFamName(combo.familyId)}</div>
+      <div class="tt-combo-bonus">${augFamBonus(combo.familyId, maxLevel)}</div>`;
+  }
+
+  tooltip.innerHTML = `
+    <div class="tt-tier ${aug.tier}">${lang.tier(aug.tier)}</div>
+    <div class="tt-name">${augName(aug)}</div>
+    <div class="tt-desc">${augDesc(aug)}</div>
+    ${comboHtml}`;
+  tooltip.classList.add('visible');
+}
+
+function hideTooltip() {
+  tooltip.classList.remove('visible');
+}
+
+function showComboTooltip(el) {
+  const familyId = el.dataset.familyId;
+  const count    = parseInt(el.dataset.count, 10);
+  const fam      = engine.getFamilyById(familyId);
+  if (!fam) return;
+
+  const rows = [2, 3, 4].map(n => {
+    const bonus = augFamBonus(familyId, n);
+    if (!bonus) return '';
+    const achieved = n <= count;
+    return `
+      <div class="combo-level-row ${achieved ? 'achieved' : 'next'}" style="font-size:0.79rem;display:flex;align-items:baseline;gap:7px;">
+        <span class="combo-level-check" style="width:14px;flex-shrink:0;">${achieved ? '✓' : '▷'}</span>
+        <span class="combo-level-label" style="font-weight:600;white-space:nowrap;font-size:0.73rem;color:${achieved ? '#6adb9a' : 'var(--text-dim)'}">
+          ${lang.t('ui.combo_pieces', { count: n })}
+        </span>
+        <span style="color:var(--text-dim);font-size:0.78rem;">${bonus}</span>
+      </div>`;
+  }).join('');
+
+  tooltip.innerHTML = `
+    <div class="tt-combo-family" style="color:${fam.color}">${augFamName(familyId)}</div>
+    <div class="tt-combo-label">${lang.t('ui.tooltip_combo_active', { count })}</div>
+    <hr class="tt-divider">
+    ${rows}`;
+  tooltip.classList.add('visible');
+}
+
+function showFamilyTooltip(el) {
+  const familyId = el.dataset.familyId;
+  const fam = engine.getFamilyById(familyId);
+  if (!fam) return;
+
+  const count = engine.getSelectedIds().filter(id => {
+    const a = engine.getAugmentById(id);
+    const fams = Array.isArray(a?.family) ? a.family : (a?.family ? [a.family] : []);
+    return fams.includes(familyId);
+  }).length;
+
+  const rows = [2, 3, 4].map(n => {
+    const bonus = augFamBonus(familyId, n);
+    if (!bonus) return '';
+    const achieved = n <= count;
+    return `
+      <div class="combo-level-row ${achieved ? 'achieved' : 'next'}" style="display:flex;align-items:baseline;gap:7px;">
+        <span class="combo-level-check" style="width:14px;flex-shrink:0;">${achieved ? '✓' : '▷'}</span>
+        <span class="combo-level-label" style="font-weight:600;white-space:nowrap;font-size:0.73rem;color:${achieved ? '#6adb9a' : 'var(--text-dim)'}">
+          ${lang.t('ui.combo_pieces', { count: n })}
+        </span>
+        <span style="color:var(--text-dim);font-size:0.78rem;">${bonus}</span>
+      </div>`;
+  }).join('');
+
+  const countLabel = count > 0
+    ? lang.t('ui.tooltip_combo_active', { count })
+    : lang.t('ui.combo_pieces', { count: 0 }) || `0`;
+
+  tooltip.innerHTML = `
+    <div class="tt-combo-family" style="color:${fam.color}">${augFamName(familyId)}</div>
+    <div class="tt-combo-label">${countLabel}</div>
+    <hr class="tt-divider">
+    ${rows}`;
+  tooltip.classList.add('visible');
+}
+
+// ── Modal ───────────────────────────────────────────────────────
+function showModal(title, msg, augIds, cb) {
+  const overlay = document.getElementById('modal-overlay');
+  const notif   = document.getElementById('modal-notif');
+  const augsHtml = augIds.length ? `
+    <div class="notif-aug-list">
+      ${augIds.map(id => {
+        const a = engine.getAugmentById(id);
+        return `
+          <div class="notif-aug-item ${a.tier}">
+            <div class="notif-dot"></div>
+            <div>
+              <strong>${augName(a)}</strong>
+              <span style="color:var(--text-dim);font-size:0.72rem;margin-left:6px;">${lang.tier(a.tier)}</span>
+            </div>
+          </div>`;
+      }).join('')}
+    </div>` : '';
+
+  notif.innerHTML = `
+    <h3>${title}</h3>
+    <p>${msg}</p>
+    ${augsHtml}
+    <button class="btn-notif-ok" onclick="closeModal()">${lang.t('ui.notif_confirm')}</button>`;
+  overlay.classList.remove('hidden');
+  notif.classList.remove('hidden');
+  pendingModalCb = cb;
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.add('hidden');
+  document.getElementById('modal-notif').classList.add('hidden');
+  const cb = pendingModalCb;
+  pendingModalCb = null;
+  if (cb) cb();
+}
+
+// ══════════════════════════════════════════════════════════════════
+// END SCREEN
+// ══════════════════════════════════════════════════════════════════
+function endGame() {
+  document.getElementById('game-screen').classList.add('hidden');
+  renderEnd();
+  document.getElementById('end-screen').classList.remove('hidden');
+}
+
+function renderEnd() {
+  const ids = engine.getSelectedIds();
+  document.getElementById('es-title').textContent = lang.t('ui.end_title');
+  document.getElementById('es-sub').textContent   = lang.t('ui.end_sub');
+  document.getElementById('es-augs-title').textContent  = lang.t('ui.end_augs_title');
+  document.getElementById('es-combos-title').textContent = lang.t('ui.end_combos_title');
+  document.getElementById('es-btn-restart').textContent  = lang.t('ui.btn_restart');
+
+  // Cards
+  document.getElementById('es-cards').innerHTML = ids.map(id => {
+    const aug = engine.getAugmentById(id);
+    const famId0 = aug.family?.[0] ?? null;
+    const fam = famId0 ? engine.getFamilyById(famId0) : null;
+    const iconHtml = aug.iconUrl
+      ? `<img src="${aug.iconUrl}" alt="" style="width:32px;height:32px;border-radius:5px;margin-bottom:6px;display:block;" loading="lazy">`
+      : '';
+    return `
+      <div class="end-card ${aug.tier}">
+        ${iconHtml}
+        <div class="end-card-tier ${aug.tier}">${lang.tier(aug.tier)}</div>
+        <div class="end-card-name">${augName(aug)}</div>
+        ${fam ? `<div class="end-card-family" style="color:${fam.color}">◈ ${augFamName(famId0)}</div>` : ''}
+        <div class="end-card-desc">${augDesc(aug)}</div>
+      </div>`;
+  }).join('');
+
+  // Combos
+  const active = engine.getActiveCombos();
+  const combosEl = document.getElementById('es-combos');
+  if (!active.length) {
+    combosEl.innerHTML = `<div class="end-no-combos">${lang.t('ui.end_no_combos')}</div>`;
+    return;
+  }
+
+  combosEl.innerHTML = active.map(({ familyId, count, memberAugIds }) => {
+    const fam      = engine.getFamilyById(familyId);
+    const maxLevel = Math.min(count, 4);
+    const cls      = `c${maxLevel}`;
+
+    const rows = [2,3,4].filter(n => n <= count).map(n => {
+      const bonus = augFamBonus(familyId, n);
+      if (!bonus) return '';
+      return `
+        <div class="end-combo-level-row achieved">
+          <span class="ecl-check">✓</span>
+          <span class="ecl-label" style="color:#6adb9a">${lang.t('ui.combo_pieces', { count: n })}</span>
+          <span class="ecl-bonus">${bonus}</span>
+        </div>`;
+    }).join('');
+
+    const augBadges = memberAugIds.map(id => {
+      const a = engine.getAugmentById(id);
+      const iconHtml = a.iconUrl
+        ? `<img class="badge-icon" src="${a.iconUrl}" alt="" loading="lazy">`
+        : '';
+      return `<div class="history-badge ${a.tier}" style="pointer-events:none">${iconHtml}<div class="badge-dot"></div>${augName(a)}</div>`;
+    }).join('');
+
+    return `
+      <div class="end-combo-card ${cls}">
+        <div class="end-combo-header">
+          <span class="end-combo-name" style="color:${fam.color}">${augFamName(familyId)}</span>
+          <span class="combo-count-badge">×${count}</span>
+        </div>
+        <div class="end-combo-augs">${augBadges}</div>
+        <div class="end-combo-levels">${rows}</div>
+      </div>`;
+  }).join('');
+}
+
+function restartGame() {
+  hideTooltip();
+  document.getElementById('end-screen').classList.add('hidden');
+  renderStartScreen();
+  document.getElementById('start-screen').classList.remove('hidden');
+}
+</script>
+</body>
+</html>
